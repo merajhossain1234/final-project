@@ -1,0 +1,1394 @@
+Script started on Sat May  3 14:18:50 2025
+[1m[7m%[27m[1m[0m                                                                                                                 [0m[27m[24m[Jsourav@souravs-MacBook-Pro final-project % [K[?2004hvvirtu   v  ppip install virtualenv[?2004l
+zsh: command not found: pip
+[1m[7m%[27m[1m[0m                                                                                                                 [0m[27m[24m[Jsourav@souravs-MacBook-Pro final-project % [K[?2004hpip install virtualenv3 install virtualenv[19D[1C[1C[1C[1C[1C[?2004l
+Collecting virtualenv
+  Downloading virtualenv-20.30.0-py3-none-any.whl.metadata (4.5 kB)
+Collecting distlib<1,>=0.3.7 (from virtualenv)
+  Downloading distlib-0.3.9-py2.py3-none-any.whl.metadata (5.2 kB)
+Collecting filelock<4,>=3.12.2 (from virtualenv)
+  Downloading filelock-3.18.0-py3-none-any.whl.metadata (2.9 kB)
+Collecting platformdirs<5,>=3.9.1 (from virtualenv)
+  Downloading platformdirs-4.3.7-py3-none-any.whl.metadata (11 kB)
+Downloading virtualenv-20.30.0-py3-none-any.whl (4.3 MB)
+[?25l   [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/4.3 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [38;2;249;38;114m━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.3/4.3 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━[0m [32m3.4/4.3 MB[0m [31m15.9 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━[0m [32m3.9/4.3 MB[0m [31m9.3 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m4.3/4.3 MB[0m [31m7.6 MB/s[0m eta [36m0:00:00[0m
+[?25hDownloading distlib-0.3.9-py2.py3-none-any.whl (468 kB)
+Downloading filelock-3.18.0-py3-none-any.whl (16 kB)
+Downloading platformdirs-4.3.7-py3-none-any.whl (18 kB)
+Installing collected packages: distlib, platformdirs, filelock, virtualenv
+Successfully installed distlib-0.3.9 filelock-3.18.0 platformdirs-4.3.7 virtualenv-20.30.0
+
+[1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m A new release of pip is available: [0m[31;49m24.2[0m[39;49m -> [0m[32;49m25.1.1[0m
+[1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m To update, run: [0m[32;49mpip3 install --upgrade pip[0m
+[1m[7m%[27m[1m[0m                                                                                                                 [0m[27m[24m[Jsourav@souravs-MacBook-Pro final-project % [K[?2004hvvirtu   v  vvirtu   v  [7mhttps://github.com/merajhossain1234/final-project.git[27m[53D[27mh[27mt[27mt[27mp[27ms[27m:[27m/[27m/[27mg[27mi[27mt[27mh[27mu[27mb[27m.[27mc[27mo[27mm[27m/[27mm[27me[27mr[27ma[27mj[27mh[27mo[27ms[27ms[27ma[27mi[27mn[27m1[27m2[27m3[27m4[27m/[27mf[27mi[27mn[27ma[27ml[27m-[27mp[27mr[27mo[27mj[27me[27mc[27mt[27m.[27mg[27mi[27m                             [?2004l
+zsh: no such file or directory: https://github.com/meraj
+[1m[7m%[27m[1m[0m                                                                                                                 [0m[27m[24m[Jsourav@souravs-MacBook-Pro final-project % [K[?2004h[7mvirtualenv --help[27m
+[K[A[43C[27mv[27mi[27mr[27mt[27mu[27ma[27ml[27me[27mn[27mv[27m [27m-[27m-[27mh[27me[27ml[27mp[1B[K[?2004l
+usage: virtualenv [--version] [--with-traceback] [-v | -q] [--read-only-app-data] [--app-data APP_DATA] [--reset-app-data] [--upgrade-embed-wheels] [--discovery {builtin}] [-p py] [--try-first-with py_exe]
+                  [--creator {builtin,cpython3-posix,venv}] [--seeder {app-data,pip}] [--no-seed] [--activators comma_sep_list] [--clear] [--no-vcs-ignore] [--system-site-packages] [--symlinks | --copies] [--no-download | --download]
+                  [--extra-search-dir d [d ...]] [--pip version] [--setuptools version] [--wheel version] [--no-pip] [--no-setuptools] [--no-wheel] [--no-periodic-update] [--symlink-app-data] [--prompt prompt] [-h]
+                  dest
+
+options:
+  --version                     display the version of the virtualenv package and its location, then exit
+  --with-traceback              on failure also display the stacktrace internals of virtualenv (default: False)
+  --read-only-app-data          use app data folder in read-only mode (write operations will fail with error) (default: False)
+  --app-data APP_DATA           a data folder used as cache by the virtualenv (default: /Users/sourav/Library/Application Support/virtualenv)
+  --reset-app-data              start with empty app data folder (default: False)
+  --upgrade-embed-wheels        trigger a manual update of the embedded wheels (default: False)
+  -h, --help                    show this help message and exit
+
+verbosity:
+  verbosity = verbose - quiet, default INFO, mapping => CRITICAL=0, ERROR=1, WARNING=2, INFO=3, DEBUG=4, NOTSET=5
+
+  -v, --verbose                 increase verbosity (default: 2)
+  -q, --quiet                   decrease verbosity (default: 0)
+
+discovery:
+  discover and provide a target interpreter
+
+  --discovery {builtin}         interpreter discovery method (default: builtin)
+  -p py, --python py            interpreter based on what to create environment (path/identifier) - by default use the interpreter where the tool is installed - first found wins (default: [])
+  --try-first-with py_exe       try first these interpreters before starting the discovery (default: [])
+
+creator:
+  options for creator builtin
+
+  --creator {builtin,cpython3-posix,venv}
+                                create environment via (builtin = cpython3-posix) (default: builtin)
+  dest                          directory to create virtualenv at
+  --clear                       remove the destination directory if exist before starting (will overwrite files otherwise) (default: False)
+  --no-vcs-ignore               don't create VCS ignore directive in the destination directory (default: False)
+  --system-site-packages        give the virtual environment access to the system site-packages dir (default: False)
+  --symlinks                    try to use symlinks rather than copies, when symlinks are not the default for the platform (default: True)
+  --copies, --always-copy       try to use copies rather than symlinks, even when symlinks are the default for the platform (default: False)
+
+seeder:
+  options for seeder app-data
+
+  --seeder {app-data,pip}       seed packages install method (default: app-data)
+  --no-seed, --without-pip      do not install seed packages (default: False)
+  --no-download, --never-download
+                                pass to disable download of the latest pip/setuptools/wheel from PyPI (default: True)
+  --download                    pass to enable download of the latest pip/setuptools/wheel from PyPI (default: False)
+  --extra-search-dir d [d ...]  a path containing wheels to extend the internal wheel list (can be set 1+ times) (default: [])
+  --pip version                 version of pip to install as seed: embed, bundle, none or exact version (default: bundle)
+  --setuptools version          version of setuptools to install as seed: embed, bundle, none or exact version (default: none)
+  --wheel version               version of wheel to install as seed: embed, bundle, none or exact version (default: none)
+  --no-pip                      do not install pip (default: False)
+  --no-setuptools               do not install setuptools (default: False)
+  --no-wheel                    do not install wheel (default: False)
+  --no-periodic-update          disable the periodic (once every 14 days) update of the embedded wheels (default: False)
+  --symlink-app-data            symlink the python packages from the app-data folder (requires seed pip>=19.3) (default: False)
+
+activators:
+  options for activation scripts
+
+  --activators comma_sep_list   activators to generate - default is all supported (default: bash,cshell,fish,nushell,powershell,python)
+  --prompt prompt               provides an alternative prompt prefix for this environment (value of . means name of the current working directory) (default: None)
+
+config file /Users/sourav/Library/Application Support/virtualenv/virtualenv.ini missing (change via env var VIRTUALENV_CONFIG_FILE)
+[1m[7m%[27m[1m[0m                                                                                                                 [0m[27m[24m[Jsourav@souravs-MacBook-Pro final-project % [K[?2004hvirtualenv --help
+[K[K[A[60C      venv[?2004l[1Bcreated virtual environment CPython3.12.6.final.0-64 in 2163ms
+  creator CPython3Posix(dest=/Users/sourav12/Office/university/final-project/venv, clear=False, no_vcs_ignore=False, global=False)
+  seeder FromAppData(download=False, pip=bundle, via=copy, app_data_dir=/Users/sourav/Library/Application Support/virtualenv)
+    added seed packages: pip==25.0.1
+  activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[1m[7m%[27m[1m[0m                                                                                                                 [0m[27m[24m[Jsourav@souravs-MacBook-Pro final-project % [K[?2004hssource venv[1m/[0m[0m/activate[?2004l
+source: no such file or directory: venv/activate
+[1m[7m%[27m[1m[0m                                                                                                                 [0m[27m[24m[Jsourav@souravs-MacBook-Pro final-project % [K[?2004hsource venv/activate        bin/activate[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                 [0m[27m[24m[J(venv) sourav@souravs-MacBook-Pro final-project % [K[?2004hppip ins   3 install -r requirements.txt[1m [0m[0m [?2004l
+Collecting acres==0.3.0 (from -r requirements.txt (line 1))
+  Downloading acres-0.3.0-py3-none-any.whl.metadata (5.5 kB)
+Collecting aiofiles==24.1.0 (from -r requirements.txt (line 2))
+  Downloading aiofiles-24.1.0-py3-none-any.whl.metadata (10 kB)
+Collecting annotated-types==0.7.0 (from -r requirements.txt (line 3))
+  Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+Collecting anyio==4.9.0 (from -r requirements.txt (line 4))
+  Downloading anyio-4.9.0-py3-none-any.whl.metadata (4.7 kB)
+Collecting asgiref==3.8.1 (from -r requirements.txt (line 5))
+  Using cached asgiref-3.8.1-py3-none-any.whl.metadata (9.3 kB)
+Collecting beautifulsoup4==4.13.4 (from -r requirements.txt (line 6))
+  Downloading beautifulsoup4-4.13.4-py3-none-any.whl.metadata (3.8 kB)
+Collecting cachetools==5.5.2 (from -r requirements.txt (line 7))
+  Downloading cachetools-5.5.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting certifi==2025.1.31 (from -r requirements.txt (line 8))
+  Downloading certifi-2025.1.31-py3-none-any.whl.metadata (2.5 kB)
+Collecting cffi==1.17.1 (from -r requirements.txt (line 9))
+  Downloading cffi-1.17.1-cp312-cp312-macosx_10_9_x86_64.whl.metadata (1.5 kB)
+Collecting charset-normalizer==3.4.1 (from -r requirements.txt (line 10))
+  Downloading charset_normalizer-3.4.1-cp312-cp312-macosx_10_13_universal2.whl.metadata (35 kB)
+Collecting ci-info==0.3.0 (from -r requirements.txt (line 11))
+  Downloading ci_info-0.3.0-py3-none-any.whl.metadata (6.1 kB)
+Collecting click==8.1.8 (from -r requirements.txt (line 12))
+  Downloading click-8.1.8-py3-none-any.whl.metadata (2.3 kB)
+Collecting colorama==0.4.6 (from -r requirements.txt (line 13))
+  Using cached colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Collecting configobj==5.0.9 (from -r requirements.txt (line 14))
+  Downloading configobj-5.0.9-py2.py3-none-any.whl.metadata (3.2 kB)
+Collecting configparser==7.2.0 (from -r requirements.txt (line 15))
+  Downloading configparser-7.2.0-py3-none-any.whl.metadata (5.5 kB)
+Collecting cryptography==44.0.2 (from -r requirements.txt (line 16))
+  Downloading cryptography-44.0.2-cp39-abi3-macosx_10_9_universal2.whl.metadata (5.7 kB)
+Collecting dj-rest-auth==7.0.1 (from -r requirements.txt (line 17))
+  Downloading dj-rest-auth-7.0.1.tar.gz (220 kB)
+  Installing build dependencies ... [?25l- \ | / done
+[?25h  Getting requirements to build wheel ... [?25l- done
+[?25h  Preparing metadata (pyproject.toml) ... [?25l- done
+[?25hCollecting Django==5.2 (from -r requirements.txt (line 18))
+  Downloading Django-5.2-py3-none-any.whl.metadata (4.1 kB)
+Collecting django-allauth==65.7.0 (from -r requirements.txt (line 19))
+  Downloading django_allauth-65.7.0.tar.gz (1.6 MB)
+[?25l     [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/1.6 MB[0m [31m?[0m eta [36m-:--:--[0m[2K     [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.6/1.6 MB[0m [31m9.8 MB/s[0m eta [36m0:00:00[0m
+[?25h  Installing build dependencies ... [?25l- \ done
+[?25h  Getting requirements to build wheel ... [?25l- \ | done
+[?25h  Preparing metadata (pyproject.toml) ... [?25l- \ done
+[?25hCollecting djangorestframework==3.16.0 (from -r requirements.txt (line 20))
+  Downloading djangorestframework-3.16.0-py3-none-any.whl.metadata (11 kB)
+Collecting etelemetry==0.3.1 (from -r requirements.txt (line 21))
+  Downloading etelemetry-0.3.1-py3-none-any.whl.metadata (3.2 kB)
+Collecting filelock==3.18.0 (from -r requirements.txt (line 22))
+  Using cached filelock-3.18.0-py3-none-any.whl.metadata (2.9 kB)
+Collecting frontend==0.0.3 (from -r requirements.txt (line 23))
+  Downloading frontend-0.0.3-py3-none-any.whl.metadata (847 bytes)
+Collecting fsspec==2025.3.2 (from -r requirements.txt (line 24))
+  Downloading fsspec-2025.3.2-py3-none-any.whl.metadata (11 kB)
+Collecting google==3.0.0 (from -r requirements.txt (line 25))
+  Downloading google-3.0.0-py2.py3-none-any.whl.metadata (627 bytes)
+Collecting google-ai-generativelanguage==0.6.15 (from -r requirements.txt (line 26))
+  Downloading google_ai_generativelanguage-0.6.15-py3-none-any.whl.metadata (5.7 kB)
+Collecting google-api-core==2.24.2 (from -r requirements.txt (line 27))
+  Downloading google_api_core-2.24.2-py3-none-any.whl.metadata (3.0 kB)
+Collecting google-api-python-client==2.167.0 (from -r requirements.txt (line 28))
+  Downloading google_api_python_client-2.167.0-py2.py3-none-any.whl.metadata (6.7 kB)
+Collecting google-auth==2.39.0 (from -r requirements.txt (line 29))
+  Downloading google_auth-2.39.0-py2.py3-none-any.whl.metadata (6.2 kB)
+Collecting google-auth-httplib2==0.2.0 (from -r requirements.txt (line 30))
+  Using cached google_auth_httplib2-0.2.0-py2.py3-none-any.whl.metadata (2.2 kB)
+Collecting google-generativeai==0.8.5 (from -r requirements.txt (line 31))
+  Downloading google_generativeai-0.8.5-py3-none-any.whl.metadata (3.9 kB)
+Collecting googleapis-common-protos==1.70.0 (from -r requirements.txt (line 32))
+  Downloading googleapis_common_protos-1.70.0-py3-none-any.whl.metadata (9.3 kB)
+Collecting grpcio==1.71.0 (from -r requirements.txt (line 33))
+  Downloading grpcio-1.71.0-cp312-cp312-macosx_10_14_universal2.whl.metadata (3.8 kB)
+Collecting grpcio-status==1.71.0 (from -r requirements.txt (line 34))
+  Downloading grpcio_status-1.71.0-py3-none-any.whl.metadata (1.1 kB)
+Collecting h11==0.14.0 (from -r requirements.txt (line 35))
+  Using cached h11-0.14.0-py3-none-any.whl.metadata (8.2 kB)
+Collecting httplib2==0.22.0 (from -r requirements.txt (line 36))
+  Using cached httplib2-0.22.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting huggingface-hub==0.30.2 (from -r requirements.txt (line 37))
+  Downloading huggingface_hub-0.30.2-py3-none-any.whl.metadata (13 kB)
+Collecting idna==3.10 (from -r requirements.txt (line 38))
+  Downloading idna-3.10-py3-none-any.whl.metadata (10 kB)
+Collecting isodate==0.6.1 (from -r requirements.txt (line 39))
+  Downloading isodate-0.6.1-py2.py3-none-any.whl.metadata (9.6 kB)
+Collecting itsdangerous==2.2.0 (from -r requirements.txt (line 40))
+  Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+Collecting Jinja2==3.1.6 (from -r requirements.txt (line 41))
+  Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting joblib==1.4.2 (from -r requirements.txt (line 42))
+  Downloading joblib-1.4.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting looseversion==1.3.0 (from -r requirements.txt (line 43))
+  Downloading looseversion-1.3.0-py2.py3-none-any.whl.metadata (4.6 kB)
+Collecting lxml==5.3.2 (from -r requirements.txt (line 44))
+  Downloading lxml-5.3.2-cp312-cp312-macosx_10_9_x86_64.whl.metadata (3.6 kB)
+Collecting MarkupSafe==3.0.2 (from -r requirements.txt (line 45))
+  Downloading MarkupSafe-3.0.2-cp312-cp312-macosx_10_13_universal2.whl.metadata (4.0 kB)
+Collecting mpmath==1.3.0 (from -r requirements.txt (line 46))
+  Downloading mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+Collecting networkx==3.4.2 (from -r requirements.txt (line 47))
+  Downloading networkx-3.4.2-py3-none-any.whl.metadata (6.3 kB)
+Collecting nibabel==5.3.2 (from -r requirements.txt (line 48))
+  Downloading nibabel-5.3.2-py3-none-any.whl.metadata (9.1 kB)
+Collecting nipype==1.10.0 (from -r requirements.txt (line 49))
+  Downloading nipype-1.10.0-py3-none-any.whl.metadata (7.1 kB)
+Collecting numpy==2.2.5 (from -r requirements.txt (line 50))
+  Downloading numpy-2.2.5-cp312-cp312-macosx_10_13_x86_64.whl.metadata (62 kB)
+Collecting packaging==25.0 (from -r requirements.txt (line 51))
+  Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting pandas==2.2.3 (from -r requirements.txt (line 52))
+  Downloading pandas-2.2.3-cp312-cp312-macosx_10_9_x86_64.whl.metadata (89 kB)
+Collecting pathlib==1.0.1 (from -r requirements.txt (line 53))
+  Downloading pathlib-1.0.1-py3-none-any.whl.metadata (5.1 kB)
+Collecting pillow==11.2.1 (from -r requirements.txt (line 54))
+  Downloading pillow-11.2.1-cp312-cp312-macosx_10_13_x86_64.whl.metadata (8.9 kB)
+Collecting proto-plus==1.26.1 (from -r requirements.txt (line 55))
+  Downloading proto_plus-1.26.1-py3-none-any.whl.metadata (2.2 kB)
+Collecting protobuf==5.29.4 (from -r requirements.txt (line 56))
+  Downloading protobuf-5.29.4-cp38-abi3-macosx_10_9_universal2.whl.metadata (592 bytes)
+Collecting prov==2.0.1 (from -r requirements.txt (line 57))
+  Downloading prov-2.0.1-py3-none-any.whl.metadata (3.6 kB)
+Collecting puremagic==1.28 (from -r requirements.txt (line 58))
+  Downloading puremagic-1.28-py3-none-any.whl.metadata (5.8 kB)
+Collecting pyasn1==0.6.1 (from -r requirements.txt (line 59))
+  Downloading pyasn1-0.6.1-py3-none-any.whl.metadata (8.4 kB)
+Collecting pyasn1_modules==0.4.2 (from -r requirements.txt (line 60))
+  Downloading pyasn1_modules-0.4.2-py3-none-any.whl.metadata (3.5 kB)
+Collecting pycparser==2.22 (from -r requirements.txt (line 61))
+  Downloading pycparser-2.22-py3-none-any.whl.metadata (943 bytes)
+Collecting pydantic==2.11.3 (from -r requirements.txt (line 62))
+  Downloading pydantic-2.11.3-py3-none-any.whl.metadata (65 kB)
+Collecting pydantic_core==2.33.1 (from -r requirements.txt (line 63))
+  Downloading pydantic_core-2.33.1-cp312-cp312-macosx_10_12_x86_64.whl.metadata (6.8 kB)
+Collecting pydot==3.0.4 (from -r requirements.txt (line 64))
+  Downloading pydot-3.0.4-py3-none-any.whl.metadata (10 kB)
+Collecting PyJWT==2.10.1 (from -r requirements.txt (line 65))
+  Downloading PyJWT-2.10.1-py3-none-any.whl.metadata (4.0 kB)
+Collecting PyMuPDF==1.25.5 (from -r requirements.txt (line 66))
+  Downloading pymupdf-1.25.5-cp39-abi3-macosx_10_9_x86_64.whl.metadata (3.4 kB)
+Collecting pyparsing==3.2.3 (from -r requirements.txt (line 67))
+  Downloading pyparsing-3.2.3-py3-none-any.whl.metadata (5.0 kB)
+Collecting python-dateutil==2.9.0.post0 (from -r requirements.txt (line 68))
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting pytz==2025.2 (from -r requirements.txt (line 69))
+  Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+Collecting pyxnat==1.6.3 (from -r requirements.txt (line 70))
+  Downloading pyxnat-1.6.3-py3-none-any.whl.metadata (5.4 kB)
+Collecting PyYAML==6.0.2 (from -r requirements.txt (line 71))
+  Downloading PyYAML-6.0.2-cp312-cp312-macosx_10_9_x86_64.whl.metadata (2.1 kB)
+Collecting rdflib==6.3.2 (from -r requirements.txt (line 72))
+  Downloading rdflib-6.3.2-py3-none-any.whl.metadata (11 kB)
+Collecting regex==2024.11.6 (from -r requirements.txt (line 73))
+  Downloading regex-2024.11.6-cp312-cp312-macosx_10_13_x86_64.whl.metadata (40 kB)
+Collecting requests==2.32.3 (from -r requirements.txt (line 74))
+  Using cached requests-2.32.3-py3-none-any.whl.metadata (4.6 kB)
+Collecting rsa==4.9.1 (from -r requirements.txt (line 75))
+  Downloading rsa-4.9.1-py3-none-any.whl.metadata (5.6 kB)
+Collecting safetensors==0.5.3 (from -r requirements.txt (line 76))
+  Downloading safetensors-0.5.3-cp38-abi3-macosx_10_12_x86_64.whl.metadata (3.8 kB)
+Collecting scikit-learn==1.6.1 (from -r requirements.txt (line 77))
+  Downloading scikit_learn-1.6.1-cp312-cp312-macosx_10_13_x86_64.whl.metadata (31 kB)
+Collecting scipy==1.15.2 (from -r requirements.txt (line 78))
+  Downloading scipy-1.15.2-cp312-cp312-macosx_10_13_x86_64.whl.metadata (61 kB)
+Collecting sentence-transformers==4.1.0 (from -r requirements.txt (line 79))
+  Downloading sentence_transformers-4.1.0-py3-none-any.whl.metadata (13 kB)
+Collecting setuptools==79.0.0 (from -r requirements.txt (line 80))
+  Downloading setuptools-79.0.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting simplejson==3.20.1 (from -r requirements.txt (line 81))
+  Downloading simplejson-3.20.1-cp312-cp312-macosx_10_9_x86_64.whl.metadata (3.3 kB)
+Collecting six==1.17.0 (from -r requirements.txt (line 82))
+  Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting sniffio==1.3.1 (from -r requirements.txt (line 83))
+  Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting soupsieve==2.7 (from -r requirements.txt (line 84))
+  Downloading soupsieve-2.7-py3-none-any.whl.metadata (4.6 kB)
+Collecting sqlparse==0.5.3 (from -r requirements.txt (line 85))
+  Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+Collecting starlette==0.46.2 (from -r requirements.txt (line 86))
+  Downloading starlette-0.46.2-py3-none-any.whl.metadata (6.2 kB)
+Collecting sympy==1.13.1 (from -r requirements.txt (line 87))
+  Downloading sympy-1.13.1-py3-none-any.whl.metadata (12 kB)
+Collecting threadpoolctl==3.6.0 (from -r requirements.txt (line 88))
+  Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+Collecting tokenizers==0.21.1 (from -r requirements.txt (line 89))
+  Downloading tokenizers-0.21.1-cp39-abi3-macosx_10_12_x86_64.whl.metadata (6.8 kB)
+[31mERROR: Could not find a version that satisfies the requirement torch==2.6.0 (from versions: 2.2.0, 2.2.1, 2.2.2)[0m[31m
+[0m
+[1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m A new release of pip is available: [0m[31;49m25.0.1[0m[39;49m -> [0m[32;49m25.1.1[0m
+[1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m To update, run: [0m[32;49mpip install --upgrade pip[0m
+[31mERROR: No matching distribution found for torch==2.6.0[0m[31m
+[0m[1m[7m%[27m[1m[0m                                                                                                                 [0m[27m[24m[J(venv) sourav@souravs-MacBook-Pro final-project % [K[?2004hpip3 install -r requirements.txt[?2004l
+Collecting acres==0.3.0 (from -r requirements.txt (line 1))
+  Using cached acres-0.3.0-py3-none-any.whl.metadata (5.5 kB)
+Collecting aiofiles==24.1.0 (from -r requirements.txt (line 2))
+  Using cached aiofiles-24.1.0-py3-none-any.whl.metadata (10 kB)
+Collecting annotated-types==0.7.0 (from -r requirements.txt (line 3))
+  Using cached annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+Collecting anyio==4.9.0 (from -r requirements.txt (line 4))
+  Using cached anyio-4.9.0-py3-none-any.whl.metadata (4.7 kB)
+Collecting asgiref==3.8.1 (from -r requirements.txt (line 5))
+  Using cached asgiref-3.8.1-py3-none-any.whl.metadata (9.3 kB)
+Collecting beautifulsoup4==4.13.4 (from -r requirements.txt (line 6))
+  Using cached beautifulsoup4-4.13.4-py3-none-any.whl.metadata (3.8 kB)
+Collecting cachetools==5.5.2 (from -r requirements.txt (line 7))
+  Using cached cachetools-5.5.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting certifi==2025.1.31 (from -r requirements.txt (line 8))
+  Using cached certifi-2025.1.31-py3-none-any.whl.metadata (2.5 kB)
+Collecting cffi==1.17.1 (from -r requirements.txt (line 9))
+  Using cached cffi-1.17.1-cp312-cp312-macosx_10_9_x86_64.whl.metadata (1.5 kB)
+Collecting charset-normalizer==3.4.1 (from -r requirements.txt (line 10))
+  Using cached charset_normalizer-3.4.1-cp312-cp312-macosx_10_13_universal2.whl.metadata (35 kB)
+Collecting ci-info==0.3.0 (from -r requirements.txt (line 11))
+  Using cached ci_info-0.3.0-py3-none-any.whl.metadata (6.1 kB)
+Collecting click==8.1.8 (from -r requirements.txt (line 12))
+  Using cached click-8.1.8-py3-none-any.whl.metadata (2.3 kB)
+Collecting colorama==0.4.6 (from -r requirements.txt (line 13))
+  Using cached colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Collecting configobj==5.0.9 (from -r requirements.txt (line 14))
+  Using cached configobj-5.0.9-py2.py3-none-any.whl.metadata (3.2 kB)
+Collecting configparser==7.2.0 (from -r requirements.txt (line 15))
+  Using cached configparser-7.2.0-py3-none-any.whl.metadata (5.5 kB)
+Collecting cryptography==44.0.2 (from -r requirements.txt (line 16))
+  Using cached cryptography-44.0.2-cp39-abi3-macosx_10_9_universal2.whl.metadata (5.7 kB)
+Collecting dj-rest-auth==7.0.1 (from -r requirements.txt (line 17))
+  Using cached dj-rest-auth-7.0.1.tar.gz (220 kB)
+  Installing build dependencies ... [?25l- \ done
+[?25h  Getting requirements to build wheel ... [?25l- done
+[?25h  Preparing metadata (pyproject.toml) ... [?25l- done
+[?25hCollecting Django==5.2 (from -r requirements.txt (line 18))
+  Using cached Django-5.2-py3-none-any.whl.metadata (4.1 kB)
+Collecting django-allauth==65.7.0 (from -r requirements.txt (line 19))
+  Using cached django_allauth-65.7.0.tar.gz (1.6 MB)
+  Installing build dependencies ... [?25l- \ done
+[?25h  Getting requirements to build wheel ... [?25l- \ | done
+[?25h  Preparing metadata (pyproject.toml) ... [?25l- \ | done
+[?25hCollecting djangorestframework==3.16.0 (from -r requirements.txt (line 20))
+  Using cached djangorestframework-3.16.0-py3-none-any.whl.metadata (11 kB)
+Collecting etelemetry==0.3.1 (from -r requirements.txt (line 21))
+  Using cached etelemetry-0.3.1-py3-none-any.whl.metadata (3.2 kB)
+Collecting filelock==3.18.0 (from -r requirements.txt (line 22))
+  Using cached filelock-3.18.0-py3-none-any.whl.metadata (2.9 kB)
+Collecting frontend==0.0.3 (from -r requirements.txt (line 23))
+  Using cached frontend-0.0.3-py3-none-any.whl.metadata (847 bytes)
+Collecting fsspec==2025.3.2 (from -r requirements.txt (line 24))
+  Using cached fsspec-2025.3.2-py3-none-any.whl.metadata (11 kB)
+Collecting google==3.0.0 (from -r requirements.txt (line 25))
+  Using cached google-3.0.0-py2.py3-none-any.whl.metadata (627 bytes)
+Collecting google-ai-generativelanguage==0.6.15 (from -r requirements.txt (line 26))
+  Using cached google_ai_generativelanguage-0.6.15-py3-none-any.whl.metadata (5.7 kB)
+Collecting google-api-core==2.24.2 (from -r requirements.txt (line 27))
+  Using cached google_api_core-2.24.2-py3-none-any.whl.metadata (3.0 kB)
+Collecting google-api-python-client==2.167.0 (from -r requirements.txt (line 28))
+  Using cached google_api_python_client-2.167.0-py2.py3-none-any.whl.metadata (6.7 kB)
+Collecting google-auth==2.39.0 (from -r requirements.txt (line 29))
+  Using cached google_auth-2.39.0-py2.py3-none-any.whl.metadata (6.2 kB)
+Collecting google-auth-httplib2==0.2.0 (from -r requirements.txt (line 30))
+  Using cached google_auth_httplib2-0.2.0-py2.py3-none-any.whl.metadata (2.2 kB)
+Collecting google-generativeai==0.8.5 (from -r requirements.txt (line 31))
+  Using cached google_generativeai-0.8.5-py3-none-any.whl.metadata (3.9 kB)
+Collecting googleapis-common-protos==1.70.0 (from -r requirements.txt (line 32))
+  Using cached googleapis_common_protos-1.70.0-py3-none-any.whl.metadata (9.3 kB)
+Collecting grpcio==1.71.0 (from -r requirements.txt (line 33))
+  Using cached grpcio-1.71.0-cp312-cp312-macosx_10_14_universal2.whl.metadata (3.8 kB)
+Collecting grpcio-status==1.71.0 (from -r requirements.txt (line 34))
+  Using cached grpcio_status-1.71.0-py3-none-any.whl.metadata (1.1 kB)
+Collecting h11==0.14.0 (from -r requirements.txt (line 35))
+  Using cached h11-0.14.0-py3-none-any.whl.metadata (8.2 kB)
+Collecting httplib2==0.22.0 (from -r requirements.txt (line 36))
+  Using cached httplib2-0.22.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting huggingface-hub==0.30.2 (from -r requirements.txt (line 37))
+  Using cached huggingface_hub-0.30.2-py3-none-any.whl.metadata (13 kB)
+Collecting idna==3.10 (from -r requirements.txt (line 38))
+  Using cached idna-3.10-py3-none-any.whl.metadata (10 kB)
+Collecting isodate==0.6.1 (from -r requirements.txt (line 39))
+  Using cached isodate-0.6.1-py2.py3-none-any.whl.metadata (9.6 kB)
+Collecting itsdangerous==2.2.0 (from -r requirements.txt (line 40))
+  Using cached itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+Collecting Jinja2==3.1.6 (from -r requirements.txt (line 41))
+  Using cached jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting joblib==1.4.2 (from -r requirements.txt (line 42))
+  Using cached joblib-1.4.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting looseversion==1.3.0 (from -r requirements.txt (line 43))
+  Using cached looseversion-1.3.0-py2.py3-none-any.whl.metadata (4.6 kB)
+Collecting lxml==5.3.2 (from -r requirements.txt (line 44))
+  Using cached lxml-5.3.2-cp312-cp312-macosx_10_9_x86_64.whl.metadata (3.6 kB)
+Collecting MarkupSafe==3.0.2 (from -r requirements.txt (line 45))
+  Using cached MarkupSafe-3.0.2-cp312-cp312-macosx_10_13_universal2.whl.metadata (4.0 kB)
+Collecting mpmath==1.3.0 (from -r requirements.txt (line 46))
+  Using cached mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+Collecting networkx==3.4.2 (from -r requirements.txt (line 47))
+  Using cached networkx-3.4.2-py3-none-any.whl.metadata (6.3 kB)
+Collecting nibabel==5.3.2 (from -r requirements.txt (line 48))
+  Using cached nibabel-5.3.2-py3-none-any.whl.metadata (9.1 kB)
+Collecting nipype==1.10.0 (from -r requirements.txt (line 49))
+  Using cached nipype-1.10.0-py3-none-any.whl.metadata (7.1 kB)
+Collecting numpy==2.2.5 (from -r requirements.txt (line 50))
+  Using cached numpy-2.2.5-cp312-cp312-macosx_10_13_x86_64.whl.metadata (62 kB)
+Collecting packaging==25.0 (from -r requirements.txt (line 51))
+  Using cached packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting pandas==2.2.3 (from -r requirements.txt (line 52))
+  Using cached pandas-2.2.3-cp312-cp312-macosx_10_9_x86_64.whl.metadata (89 kB)
+Collecting pathlib==1.0.1 (from -r requirements.txt (line 53))
+  Using cached pathlib-1.0.1-py3-none-any.whl.metadata (5.1 kB)
+Collecting pillow==11.2.1 (from -r requirements.txt (line 54))
+  Using cached pillow-11.2.1-cp312-cp312-macosx_10_13_x86_64.whl.metadata (8.9 kB)
+Collecting proto-plus==1.26.1 (from -r requirements.txt (line 55))
+  Using cached proto_plus-1.26.1-py3-none-any.whl.metadata (2.2 kB)
+Collecting protobuf==5.29.4 (from -r requirements.txt (line 56))
+  Using cached protobuf-5.29.4-cp38-abi3-macosx_10_9_universal2.whl.metadata (592 bytes)
+Collecting prov==2.0.1 (from -r requirements.txt (line 57))
+  Using cached prov-2.0.1-py3-none-any.whl.metadata (3.6 kB)
+Collecting puremagic==1.28 (from -r requirements.txt (line 58))
+  Using cached puremagic-1.28-py3-none-any.whl.metadata (5.8 kB)
+Collecting pyasn1==0.6.1 (from -r requirements.txt (line 59))
+  Using cached pyasn1-0.6.1-py3-none-any.whl.metadata (8.4 kB)
+Collecting pyasn1_modules==0.4.2 (from -r requirements.txt (line 60))
+  Using cached pyasn1_modules-0.4.2-py3-none-any.whl.metadata (3.5 kB)
+Collecting pycparser==2.22 (from -r requirements.txt (line 61))
+  Using cached pycparser-2.22-py3-none-any.whl.metadata (943 bytes)
+Collecting pydantic==2.11.3 (from -r requirements.txt (line 62))
+  Using cached pydantic-2.11.3-py3-none-any.whl.metadata (65 kB)
+Collecting pydantic_core==2.33.1 (from -r requirements.txt (line 63))
+  Using cached pydantic_core-2.33.1-cp312-cp312-macosx_10_12_x86_64.whl.metadata (6.8 kB)
+Collecting pydot==3.0.4 (from -r requirements.txt (line 64))
+  Using cached pydot-3.0.4-py3-none-any.whl.metadata (10 kB)
+Collecting PyJWT==2.10.1 (from -r requirements.txt (line 65))
+  Using cached PyJWT-2.10.1-py3-none-any.whl.metadata (4.0 kB)
+Collecting PyMuPDF==1.25.5 (from -r requirements.txt (line 66))
+  Using cached pymupdf-1.25.5-cp39-abi3-macosx_10_9_x86_64.whl.metadata (3.4 kB)
+Collecting pyparsing==3.2.3 (from -r requirements.txt (line 67))
+  Using cached pyparsing-3.2.3-py3-none-any.whl.metadata (5.0 kB)
+Collecting python-dateutil==2.9.0.post0 (from -r requirements.txt (line 68))
+  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting pytz==2025.2 (from -r requirements.txt (line 69))
+  Using cached pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+Collecting pyxnat==1.6.3 (from -r requirements.txt (line 70))
+  Using cached pyxnat-1.6.3-py3-none-any.whl.metadata (5.4 kB)
+Collecting PyYAML==6.0.2 (from -r requirements.txt (line 71))
+  Using cached PyYAML-6.0.2-cp312-cp312-macosx_10_9_x86_64.whl.metadata (2.1 kB)
+Collecting rdflib==6.3.2 (from -r requirements.txt (line 72))
+  Using cached rdflib-6.3.2-py3-none-any.whl.metadata (11 kB)
+Collecting regex==2024.11.6 (from -r requirements.txt (line 73))
+  Using cached regex-2024.11.6-cp312-cp312-macosx_10_13_x86_64.whl.metadata (40 kB)
+Collecting requests==2.32.3 (from -r requirements.txt (line 74))
+  Using cached requests-2.32.3-py3-none-any.whl.metadata (4.6 kB)
+Collecting rsa==4.9.1 (from -r requirements.txt (line 75))
+  Using cached rsa-4.9.1-py3-none-any.whl.metadata (5.6 kB)
+Collecting safetensors==0.5.3 (from -r requirements.txt (line 76))
+  Using cached safetensors-0.5.3-cp38-abi3-macosx_10_12_x86_64.whl.metadata (3.8 kB)
+Collecting scikit-learn==1.6.1 (from -r requirements.txt (line 77))
+  Using cached scikit_learn-1.6.1-cp312-cp312-macosx_10_13_x86_64.whl.metadata (31 kB)
+Collecting scipy==1.15.2 (from -r requirements.txt (line 78))
+  Using cached scipy-1.15.2-cp312-cp312-macosx_10_13_x86_64.whl.metadata (61 kB)
+Collecting sentence-transformers==4.1.0 (from -r requirements.txt (line 79))
+  Using cached sentence_transformers-4.1.0-py3-none-any.whl.metadata (13 kB)
+Collecting setuptools==79.0.0 (from -r requirements.txt (line 80))
+  Using cached setuptools-79.0.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting simplejson==3.20.1 (from -r requirements.txt (line 81))
+  Using cached simplejson-3.20.1-cp312-cp312-macosx_10_9_x86_64.whl.metadata (3.3 kB)
+Collecting six==1.17.0 (from -r requirements.txt (line 82))
+  Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting sniffio==1.3.1 (from -r requirements.txt (line 83))
+  Using cached sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting soupsieve==2.7 (from -r requirements.txt (line 84))
+  Using cached soupsieve-2.7-py3-none-any.whl.metadata (4.6 kB)
+Collecting sqlparse==0.5.3 (from -r requirements.txt (line 85))
+  Using cached sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+Collecting starlette==0.46.2 (from -r requirements.txt (line 86))
+  Using cached starlette-0.46.2-py3-none-any.whl.metadata (6.2 kB)
+Collecting sympy==1.13.1 (from -r requirements.txt (line 87))
+  Using cached sympy-1.13.1-py3-none-any.whl.metadata (12 kB)
+Collecting threadpoolctl==3.6.0 (from -r requirements.txt (line 88))
+  Using cached threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+Collecting tokenizers==0.21.1 (from -r requirements.txt (line 89))
+  Using cached tokenizers-0.21.1-cp39-abi3-macosx_10_12_x86_64.whl.metadata (6.8 kB)
+Collecting torch (from -r requirements.txt (line 90))
+  Downloading torch-2.2.2-cp312-none-macosx_10_9_x86_64.whl.metadata (25 kB)
+Collecting tqdm==4.67.1 (from -r requirements.txt (line 91))
+  Downloading tqdm-4.67.1-py3-none-any.whl.metadata (57 kB)
+Collecting traits==7.0.2 (from -r requirements.txt (line 92))
+  Downloading traits-7.0.2-cp312-cp312-macosx_10_13_x86_64.whl.metadata (4.8 kB)
+Collecting transformers==4.51.3 (from -r requirements.txt (line 93))
+  Downloading transformers-4.51.3-py3-none-any.whl.metadata (38 kB)
+Collecting typing-inspection==0.4.0 (from -r requirements.txt (line 94))
+  Downloading typing_inspection-0.4.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting typing_extensions==4.13.2 (from -r requirements.txt (line 95))
+  Downloading typing_extensions-4.13.2-py3-none-any.whl.metadata (3.0 kB)
+Collecting tzdata==2025.2 (from -r requirements.txt (line 96))
+  Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting uritemplate==4.1.1 (from -r requirements.txt (line 97))
+  Downloading uritemplate-4.1.1-py2.py3-none-any.whl.metadata (2.9 kB)
+Collecting urllib3==2.4.0 (from -r requirements.txt (line 98))
+  Downloading urllib3-2.4.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting uvicorn==0.34.2 (from -r requirements.txt (line 99))
+  Downloading uvicorn-0.34.2-py3-none-any.whl.metadata (6.5 kB)
+Downloading acres-0.3.0-py3-none-any.whl (10 kB)
+Downloading aiofiles-24.1.0-py3-none-any.whl (15 kB)
+Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+Downloading anyio-4.9.0-py3-none-any.whl (100 kB)
+Using cached asgiref-3.8.1-py3-none-any.whl (23 kB)
+Downloading beautifulsoup4-4.13.4-py3-none-any.whl (187 kB)
+Downloading cachetools-5.5.2-py3-none-any.whl (10 kB)
+Downloading certifi-2025.1.31-py3-none-any.whl (166 kB)
+Downloading cffi-1.17.1-cp312-cp312-macosx_10_9_x86_64.whl (183 kB)
+Downloading charset_normalizer-3.4.1-cp312-cp312-macosx_10_13_universal2.whl (196 kB)
+Downloading ci_info-0.3.0-py3-none-any.whl (7.8 kB)
+Downloading click-8.1.8-py3-none-any.whl (98 kB)
+Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Downloading configobj-5.0.9-py2.py3-none-any.whl (35 kB)
+Downloading configparser-7.2.0-py3-none-any.whl (17 kB)
+Downloading cryptography-44.0.2-cp39-abi3-macosx_10_9_universal2.whl (6.7 MB)
+[?25l   [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/6.7 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━[0m [32m3.1/6.7 MB[0m [31m16.8 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━[0m [32m3.7/6.7 MB[0m [31m11.8 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━[0m [32m5.8/6.7 MB[0m [31m10.3 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m6.7/6.7 MB[0m [31m9.2 MB/s[0m eta [36m0:00:00[0m
+[?25hDownloading Django-5.2-py3-none-any.whl (8.3 MB)
+[?25l   [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/8.3 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [38;2;249;38;114m━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m2.1/8.3 MB[0m [31m9.4 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━[0m [32m3.4/8.3 MB[0m [31m9.2 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━[0m [32m5.2/8.3 MB[0m [31m8.3 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━[0m [32m6.6/8.3 MB[0m [31m8.3 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m [32m8.1/8.3 MB[0m [31m7.8 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m8.3/8.3 MB[0m [31m7.5 MB/s[0m eta [36m0:00:00[0m
+[?25hDownloading djangorestframework-3.16.0-py3-none-any.whl (1.1 MB)
+[?25l   [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/1.1 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.1/1.1 MB[0m [31m4.8 MB/s[0m eta [36m0:00:00[0m
+[?25hDownloading etelemetry-0.3.1-py3-none-any.whl (6.4 kB)
+Using cached filelock-3.18.0-py3-none-any.whl (16 kB)
+Downloading frontend-0.0.3-py3-none-any.whl (32 kB)
+Downloading fsspec-2025.3.2-py3-none-any.whl (194 kB)
+Downloading google-3.0.0-py2.py3-none-any.whl (45 kB)
+Downloading google_ai_generativelanguage-0.6.15-py3-none-any.whl (1.3 MB)
+[?25l   [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/1.3 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━[0m [32m1.0/1.3 MB[0m [31m5.5 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.3/1.3 MB[0m [31m5.4 MB/s[0m eta [36m0:00:00[0m
+[?25hDownloading google_api_core-2.24.2-py3-none-any.whl (160 kB)
+Downloading google_api_python_client-2.167.0-py2.py3-none-any.whl (13.2 MB)
+[?25l   [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/13.2 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [38;2;249;38;114m━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.0/13.2 MB[0m [31m5.7 MB/s[0m eta [36m0:00:03[0m[2K   [38;2;249;38;114m━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m2.4/13.2 MB[0m [31m6.1 MB/s[0m eta [36m0:00:02[0m[2K   [38;2;249;38;114m━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m3.7/13.2 MB[0m [31m6.1 MB/s[0m eta [36m0:00:02[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m5.0/13.2 MB[0m [31m6.2 MB/s[0m eta [36m0:00:02[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━[0m [32m6.3/13.2 MB[0m [31m6.2 MB/s[0m eta [36m0:00:02[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━[0m [32m7.6/13.2 MB[0m [31m6.3 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━[0m [32m8.9/13.2 MB[0m [31m6.3 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━[0m [32m10.2/13.2 MB[0m [31m6.4 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━[0m [32m11.8/13.2 MB[0m [31m6.4 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m [32m13.1/13.2 MB[0m [31m6.4 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m13.2/13.2 MB[0m [31m6.3 MB/s[0m eta [36m0:00:00[0m
+[?25hDownloading google_auth-2.39.0-py2.py3-none-any.whl (212 kB)
+Downloading google_auth_httplib2-0.2.0-py2.py3-none-any.whl (9.3 kB)
+Downloading google_generativeai-0.8.5-py3-none-any.whl (155 kB)
+Downloading googleapis_common_protos-1.70.0-py3-none-any.whl (294 kB)
+Downloading grpcio-1.71.0-cp312-cp312-macosx_10_14_universal2.whl (11.3 MB)
+[?25l   [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/11.3 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [38;2;249;38;114m━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.0/11.3 MB[0m [31m6.5 MB/s[0m eta [36m0:00:02[0m[2K   [38;2;249;38;114m━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m2.6/11.3 MB[0m [31m6.5 MB/s[0m eta [36m0:00:02[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m3.9/11.3 MB[0m [31m6.5 MB/s[0m eta [36m0:00:02[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━[0m [32m5.2/11.3 MB[0m [31m6.6 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━[0m [32m6.8/11.3 MB[0m [31m6.7 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━[0m [32m8.1/11.3 MB[0m [31m6.7 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━[0m [32m9.7/11.3 MB[0m [31m6.8 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━[0m [32m11.0/11.3 MB[0m [31m6.8 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m11.3/11.3 MB[0m [31m6.4 MB/s[0m eta [36m0:00:00[0m
+[?25hDownloading grpcio_status-1.71.0-py3-none-any.whl (14 kB)
+Downloading h11-0.14.0-py3-none-any.whl (58 kB)
+Downloading httplib2-0.22.0-py3-none-any.whl (96 kB)
+Downloading huggingface_hub-0.30.2-py3-none-any.whl (481 kB)
+Downloading idna-3.10-py3-none-any.whl (70 kB)
+Downloading isodate-0.6.1-py2.py3-none-any.whl (41 kB)
+Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+Downloading joblib-1.4.2-py3-none-any.whl (301 kB)
+Downloading looseversion-1.3.0-py2.py3-none-any.whl (8.2 kB)
+Downloading lxml-5.3.2-cp312-cp312-macosx_10_9_x86_64.whl (4.5 MB)
+[?25l   [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/4.5 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [38;2;249;38;114m━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.3/4.5 MB[0m [31m6.7 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━[0m [32m2.6/4.5 MB[0m [31m6.9 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━[0m [32m4.2/4.5 MB[0m [31m7.0 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m4.5/4.5 MB[0m [31m6.7 MB/s[0m eta [36m0:00:00[0m
+[?25hDownloading MarkupSafe-3.0.2-cp312-cp312-macosx_10_13_universal2.whl (14 kB)
+Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+[?25l   [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/536.2 kB[0m [31m?[0m eta [36m-:--:--[0m[2K   [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m536.2/536.2 kB[0m [31m4.6 MB/s[0m eta [36m0:00:00[0m
+[?25hDownloading networkx-3.4.2-py3-none-any.whl (1.7 MB)
+[?25l   [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/1.7 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━[0m [32m1.3/1.7 MB[0m [31m6.8 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.7/1.7 MB[0m [31m6.3 MB/s[0m eta [36m0:00:00[0m
+[?25hDownloading nibabel-5.3.2-py3-none-any.whl (3.3 MB)
+[?25l   [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/3.3 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.3/3.3 MB[0m [31m6.8 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━[0m [32m2.9/3.3 MB[0m [31m7.0 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m3.3/3.3 MB[0m [31m6.6 MB/s[0m eta [36m0:00:00[0m
+[?25hDownloading nipype-1.10.0-py3-none-any.whl (3.2 MB)
+[?25l   [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/3.2 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.3/3.2 MB[0m [31m5.8 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━[0m [32m2.9/3.2 MB[0m [31m6.7 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m3.2/3.2 MB[0m [31m6.4 MB/s[0m eta [36m0:00:00[0m
+[?25hDownloading numpy-2.2.5-cp312-cp312-macosx_10_13_x86_64.whl (20.9 MB)
+[?25l   [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/20.9 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [38;2;249;38;114m━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.3/20.9 MB[0m [31m7.0 MB/s[0m eta [36m0:00:03[0m[2K   [38;2;249;38;114m━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m2.9/20.9 MB[0m [31m7.3 MB/s[0m eta [36m0:00:03[0m[2K   [38;2;249;38;114m━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m4.5/20.9 MB[0m [31m7.3 MB/s[0m eta [36m0:00:03[0m[2K   [38;2;249;38;114m━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m6.0/20.9 MB[0m [31m7.4 MB/s[0m eta [36m0:00:03[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m7.6/20.9 MB[0m [31m7.4 MB/s[0m eta [36m0:00:02[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━[0m [32m9.2/20.9 MB[0m [31m7.4 MB/s[0m eta [36m0:00:02[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━[0m [32m10.5/20.9 MB[0m [31m7.4 MB/s[0m eta [36m0:00:02[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━[0m [32m12.1/20.9 MB[0m [31m7.4 MB/s[0m eta [36m0:00:02[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━[0m [32m13.6/20.9 MB[0m [31m7.5 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━[0m [32m15.2/20.9 MB[0m [31m7.5 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━[0m [32m16.8/20.9 MB[0m [31m7.5 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━[0m [32m18.4/20.9 MB[0m [31m7.5 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━[0m [32m19.9/20.9 MB[0m [31m7.6 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m20.9/20.9 MB[0m [31m7.4 MB/s[0m eta [36m0:00:00[0m
+[?25hDownloading packaging-25.0-py3-none-any.whl (66 kB)
+Downloading pandas-2.2.3-cp312-cp312-macosx_10_9_x86_64.whl (12.5 MB)
+[?25l   [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/12.5 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [38;2;249;38;114m━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.6/12.5 MB[0m [31m7.9 MB/s[0m eta [36m0:00:02[0m[2K   [38;2;249;38;114m━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m3.1/12.5 MB[0m [31m8.1 MB/s[0m eta [36m0:00:02[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m5.0/12.5 MB[0m [31m8.1 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━[0m [32m6.6/12.5 MB[0m [31m8.2 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━[0m [32m8.4/12.5 MB[0m [31m8.3 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━[0m [32m10.2/12.5 MB[0m [31m8.3 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━[0m [32m12.1/12.5 MB[0m [31m8.5 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m12.5/12.5 MB[0m [31m8.2 MB/s[0m eta [36m0:00:00[0m
+[?25hDownloading pathlib-1.0.1-py3-none-any.whl (14 kB)
+Downloading pillow-11.2.1-cp312-cp312-macosx_10_13_x86_64.whl (3.2 MB)
+[?25l   [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/3.2 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━[0m [32m1.8/3.2 MB[0m [31m9.0 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m3.2/3.2 MB[0m [31m8.5 MB/s[0m eta [36m0:00:00[0m
+[?25hDownloading proto_plus-1.26.1-py3-none-any.whl (50 kB)
+Downloading protobuf-5.29.4-cp38-abi3-macosx_10_9_universal2.whl (417 kB)
+Downloading prov-2.0.1-py3-none-any.whl (421 kB)
+Downloading puremagic-1.28-py3-none-any.whl (43 kB)
+Downloading pyasn1-0.6.1-py3-none-any.whl (83 kB)
+Downloading pyasn1_modules-0.4.2-py3-none-any.whl (181 kB)
+Downloading pycparser-2.22-py3-none-any.whl (117 kB)
+Downloading pydantic-2.11.3-py3-none-any.whl (443 kB)
+Downloading pydantic_core-2.33.1-cp312-cp312-macosx_10_12_x86_64.whl (2.0 MB)
+[?25l   [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/2.0 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━[0m [32m1.8/2.0 MB[0m [31m9.6 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m2.0/2.0 MB[0m [31m8.4 MB/s[0m eta [36m0:00:00[0m
+[?25hDownloading pydot-3.0.4-py3-none-any.whl (35 kB)
+Downloading PyJWT-2.10.1-py3-none-any.whl (22 kB)
+Downloading pymupdf-1.25.5-cp39-abi3-macosx_10_9_x86_64.whl (19.4 MB)
+[?25l   [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/19.4 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [38;2;249;38;114m━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m2.1/19.4 MB[0m [31m10.1 MB/s[0m eta [36m0:00:02[0m[2K   [38;2;249;38;114m━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m4.2/19.4 MB[0m [31m10.2 MB/s[0m eta [36m0:00:02[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m6.3/19.4 MB[0m [31m10.4 MB/s[0m eta [36m0:00:02[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━[0m [32m7.9/19.4 MB[0m [31m9.6 MB/s[0m eta [36m0:00:02[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━[0m [32m9.2/19.4 MB[0m [31m9.2 MB/s[0m eta [36m0:00:02[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━[0m [32m10.5/19.4 MB[0m [31m8.9 MB/s[0m eta [36m0:00:02[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━[0m [32m11.3/19.4 MB[0m [31m7.9 MB/s[0m eta [36m0:00:02[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━[0m [32m12.3/19.4 MB[0m [31m7.7 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━[0m [32m13.6/19.4 MB[0m [31m7.5 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━[0m [32m14.9/19.4 MB[0m [31m7.3 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━[0m [32m16.3/19.4 MB[0m [31m7.2 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━[0m [32m17.6/19.4 MB[0m [31m7.2 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━[0m [32m18.9/19.4 MB[0m [31m7.1 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m19.4/19.4 MB[0m [31m6.9 MB/s[0m eta [36m0:00:00[0m
+[?25hDownloading pyparsing-3.2.3-py3-none-any.whl (111 kB)
+Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+Downloading pyxnat-1.6.3-py3-none-any.whl (95 kB)
+Downloading PyYAML-6.0.2-cp312-cp312-macosx_10_9_x86_64.whl (183 kB)
+Downloading rdflib-6.3.2-py3-none-any.whl (528 kB)
+[?25l   [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/528.1 kB[0m [31m?[0m eta [36m-:--:--[0m[2K   [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m528.1/528.1 kB[0m [31m4.3 MB/s[0m eta [36m0:00:00[0m
+[?25hDownloading regex-2024.11.6-cp312-cp312-macosx_10_13_x86_64.whl (288 kB)
+Using cached requests-2.32.3-py3-none-any.whl (64 kB)
+Downloading rsa-4.9.1-py3-none-any.whl (34 kB)
+Downloading safetensors-0.5.3-cp38-abi3-macosx_10_12_x86_64.whl (436 kB)
+Downloading scikit_learn-1.6.1-cp312-cp312-macosx_10_13_x86_64.whl (12.1 MB)
+[?25l   [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/12.1 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [38;2;249;38;114m━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.5/12.1 MB[0m [31m23.8 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.8/12.1 MB[0m [31m7.0 MB/s[0m eta [36m0:00:02[0m[2K   [38;2;249;38;114m━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.6/12.1 MB[0m [31m3.3 MB/s[0m eta [36m0:00:04[0m[2K   [38;2;249;38;114m━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.8/12.1 MB[0m [31m2.6 MB/s[0m eta [36m0:00:04[0m[2K   [38;2;249;38;114m━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m2.1/12.1 MB[0m [31m2.7 MB/s[0m eta [36m0:00:04[0m[2K   [38;2;249;38;114m━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m2.6/12.1 MB[0m [31m2.2 MB/s[0m eta [36m0:00:05[0m[2K   [38;2;249;38;114m━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m2.6/12.1 MB[0m [31m2.2 MB/s[0m eta [36m0:00:05[0m[2K   [38;2;249;38;114m━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m3.1/12.1 MB[0m [31m2.0 MB/s[0m eta [36m0:00:05[0m[2K   [38;2;249;38;114m━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m3.4/12.1 MB[0m [31m1.9 MB/s[0m eta [36m0:00:05[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m3.7/12.1 MB[0m [31m1.8 MB/s[0m eta [36m0:00:05[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m3.9/12.1 MB[0m [31m1.8 MB/s[0m eta [36m0:00:05[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m4.2/12.1 MB[0m [31m1.8 MB/s[0m eta [36m0:00:05[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m4.5/12.1 MB[0m [31m1.7 MB/s[0m eta [36m0:00:05[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m4.7/12.1 MB[0m [31m1.7 MB/s[0m eta [36m0:00:05[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━[0m [32m5.0/12.1 MB[0m [31m1.6 MB/s[0m eta [36m0:00:05[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━[0m [32m5.2/12.1 MB[0m [31m1.6 MB/s[0m eta [36m0:00:05[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━[0m [32m5.5/12.1 MB[0m [31m1.6 MB/s[0m eta [36m0:00:05[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━[0m [32m6.0/12.1 MB[0m [31m1.6 MB/s[0m eta [36m0:00:04[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━[0m [32m6.3/12.1 MB[0m [31m1.6 MB/s[0m eta [36m0:00:04[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━[0m [32m6.8/12.1 MB[0m [31m1.6 MB/s[0m eta [36m0:00:04[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━[0m [32m7.1/12.1 MB[0m [31m1.6 MB/s[0m eta [36m0:00:04[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━[0m [32m7.3/12.1 MB[0m [31m1.6 MB/s[0m eta [36m0:00:03[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━[0m [32m7.9/12.1 MB[0m [31m1.7 MB/s[0m eta [36m0:00:03[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━[0m [32m8.1/12.1 MB[0m [31m1.7 MB/s[0m eta [36m0:00:03[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━[0m [32m8.7/12.1 MB[0m [31m1.7 MB/s[0m eta [36m0:00:03[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━[0m [32m8.9/12.1 MB[0m [31m1.7 MB/s[0m eta [36m0:00:02[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━[0m [32m9.2/12.1 MB[0m [31m1.7 MB/s[0m eta [36m0:00:02[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━[0m [32m9.7/12.1 MB[0m [31m1.7 MB/s[0m eta [36m0:00:02[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━[0m [32m10.0/12.1 MB[0m [31m1.7 MB/s[0m eta [36m0:00:02[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━[0m [32m10.5/12.1 MB[0m [31m1.7 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━[0m [32m10.7/12.1 MB[0m [31m1.7 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━[0m [32m11.3/12.1 MB[0m [31m1.7 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━[0m [32m11.8/12.1 MB[0m [31m1.7 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m12.1/12.1 MB[0m [31m1.7 MB/s[0m eta [36m0:00:00[0m
+[?25hDownloading scipy-1.15.2-cp312-cp312-macosx_10_13_x86_64.whl (38.8 MB)
+[?25l   [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/38.8 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.3/38.8 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.8/38.8 MB[0m [31m2.4 MB/s[0m eta [36m0:00:16[0m[2K   [38;2;249;38;114m━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.3/38.8 MB[0m [31m2.4 MB/s[0m eta [36m0:00:16[0m[2K   [38;2;249;38;114m━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.8/38.8 MB[0m [31m2.4 MB/s[0m eta [36m0:00:16[0m[2K   [38;2;249;38;114m━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m2.4/38.8 MB[0m [31m2.5 MB/s[0m eta [36m0:00:15[0m[2K   [38;2;249;38;114m━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m2.9/38.8 MB[0m [31m2.5 MB/s[0m eta [36m0:00:15[0m[2K   [38;2;249;38;114m━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m3.4/38.8 MB[0m [31m2.5 MB/s[0m eta [36m0:00:15[0m[2K   [38;2;249;38;114m━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m3.9/38.8 MB[0m [31m2.5 MB/s[0m eta [36m0:00:14[0m[2K   [38;2;249;38;114m━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m4.5/38.8 MB[0m [31m2.5 MB/s[0m eta [36m0:00:14[0m[2K   [38;2;249;38;114m━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m5.0/38.8 MB[0m [31m2.6 MB/s[0m eta [36m0:00:14[0m[2K   [38;2;249;38;114m━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m5.8/38.8 MB[0m [31m2.6 MB/s[0m eta [36m0:00:13[0m[2K   [38;2;249;38;114m━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m6.3/38.8 MB[0m [31m2.6 MB/s[0m eta [36m0:00:13[0m[2K   [38;2;249;38;114m━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m6.8/38.8 MB[0m [31m2.6 MB/s[0m eta [36m0:00:13[0m[2K   [38;2;249;38;114m━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m7.3/38.8 MB[0m [31m2.6 MB/s[0m eta [36m0:00:12[0m[2K   [38;2;249;38;114m━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m8.1/38.8 MB[0m [31m2.7 MB/s[0m eta [36m0:00:12[0m[2K   [38;2;249;38;114m━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m8.7/38.8 MB[0m [31m2.7 MB/s[0m eta [36m0:00:12[0m[2K   [38;2;249;38;114m━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m9.4/38.8 MB[0m [31m2.7 MB/s[0m eta [36m0:00:11[0m[2K   [38;2;249;38;114m━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m10.2/38.8 MB[0m [31m2.8 MB/s[0m eta [36m0:00:11[0m[2K   [38;2;249;38;114m━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m10.7/38.8 MB[0m [31m2.8 MB/s[0m eta [36m0:00:10[0m[2K   [38;2;249;38;114m━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m11.5/38.8 MB[0m [31m2.9 MB/s[0m eta [36m0:00:10[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m12.6/38.8 MB[0m [31m3.0 MB/s[0m eta [36m0:00:09[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m13.4/38.8 MB[0m [31m3.0 MB/s[0m eta [36m0:00:09[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m14.4/38.8 MB[0m [31m3.1 MB/s[0m eta [36m0:00:08[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m15.5/38.8 MB[0m [31m3.2 MB/s[0m eta [36m0:00:08[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━[0m [32m16.5/38.8 MB[0m [31m3.3 MB/s[0m eta [36m0:00:07[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━[0m [32m17.8/38.8 MB[0m [31m3.4 MB/s[0m eta [36m0:00:07[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━[0m [32m18.9/38.8 MB[0m [31m3.5 MB/s[0m eta [36m0:00:06[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━[0m [32m20.2/38.8 MB[0m [31m3.6 MB/s[0m eta [36m0:00:06[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━[0m [32m21.5/38.8 MB[0m [31m3.7 MB/s[0m eta [36m0:00:05[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━[0m [32m23.1/38.8 MB[0m [31m3.8 MB/s[0m eta [36m0:00:05[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━[0m [32m24.6/38.8 MB[0m [31m3.9 MB/s[0m eta [36m0:00:04[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━[0m [32m26.2/38.8 MB[0m [31m4.0 MB/s[0m eta [36m0:00:04[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━[0m [32m28.0/38.8 MB[0m [31m4.2 MB/s[0m eta [36m0:00:03[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━[0m [32m29.9/38.8 MB[0m [31m4.3 MB/s[0m eta [36m0:00:03[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━[0m [32m32.0/38.8 MB[0m [31m4.5 MB/s[0m eta [36m0:00:02[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━[0m [32m33.8/38.8 MB[0m [31m4.6 MB/s[0m eta [36m0:00:02[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━[0m [32m34.6/38.8 MB[0m [31m4.6 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━[0m [32m34.6/38.8 MB[0m [31m4.6 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━[0m [32m35.7/38.8 MB[0m [31m4.5 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━[0m [32m37.2/38.8 MB[0m [31m4.6 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m [32m38.5/38.8 MB[0m [31m4.7 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m38.8/38.8 MB[0m [31m4.6 MB/s[0m eta [36m0:00:00[0m
+[?25hDownloading sentence_transformers-4.1.0-py3-none-any.whl (345 kB)
+Downloading setuptools-79.0.0-py3-none-any.whl (1.3 MB)
+[?25l   [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/1.3 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.3/1.3 MB[0m [31m6.8 MB/s[0m eta [36m0:00:00[0m
+[?25hDownloading simplejson-3.20.1-cp312-cp312-macosx_10_9_x86_64.whl (75 kB)
+Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+Downloading soupsieve-2.7-py3-none-any.whl (36 kB)
+Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+Downloading starlette-0.46.2-py3-none-any.whl (72 kB)
+Downloading sympy-1.13.1-py3-none-any.whl (6.2 MB)
+[?25l   [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/6.2 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [38;2;249;38;114m━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.6/6.2 MB[0m [31m7.8 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━[0m [32m3.4/6.2 MB[0m [31m8.4 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━[0m [32m5.2/6.2 MB[0m [31m8.5 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m6.2/6.2 MB[0m [31m8.2 MB/s[0m eta [36m0:00:00[0m
+[?25hDownloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+Downloading tokenizers-0.21.1-cp39-abi3-macosx_10_12_x86_64.whl (2.8 MB)
+[?25l   [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/2.8 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━[0m [32m1.8/2.8 MB[0m [31m9.1 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m2.8/2.8 MB[0m [31m8.4 MB/s[0m eta [36m0:00:00[0m
+[?25hDownloading tqdm-4.67.1-py3-none-any.whl (78 kB)
+Downloading traits-7.0.2-cp312-cp312-macosx_10_13_x86_64.whl (5.0 MB)
+[?25l   [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/5.0 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.8/5.0 MB[0m [31m9.3 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━[0m [32m3.7/5.0 MB[0m [31m9.3 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m5.0/5.0 MB[0m [31m8.8 MB/s[0m eta [36m0:00:00[0m
+[?25hDownloading transformers-4.51.3-py3-none-any.whl (10.4 MB)
+[?25l   [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/10.4 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [38;2;249;38;114m━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.8/10.4 MB[0m [31m9.5 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m3.9/10.4 MB[0m [31m9.6 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━[0m [32m6.0/10.4 MB[0m [31m9.7 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━[0m [32m7.3/10.4 MB[0m [31m9.2 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━[0m [32m8.9/10.4 MB[0m [31m8.7 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m [32m10.2/10.4 MB[0m [31m8.4 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m10.4/10.4 MB[0m [31m8.1 MB/s[0m eta [36m0:00:00[0m
+[?25hDownloading typing_inspection-0.4.0-py3-none-any.whl (14 kB)
+Downloading typing_extensions-4.13.2-py3-none-any.whl (45 kB)
+Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+Downloading uritemplate-4.1.1-py2.py3-none-any.whl (10 kB)
+Downloading urllib3-2.4.0-py3-none-any.whl (128 kB)
+Downloading uvicorn-0.34.2-py3-none-any.whl (62 kB)
+Downloading torch-2.2.2-cp312-none-macosx_10_9_x86_64.whl (150.8 MB)
+[?25l   [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/150.8 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.3/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:21[0m[2K   [38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m2.9/150.8 MB[0m [31m7.5 MB/s[0m eta [36m0:00:20[0m[2K   [38;2;249;38;114m━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m4.5/150.8 MB[0m [31m7.5 MB/s[0m eta [36m0:00:20[0m[2K   [38;2;249;38;114m━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m6.0/150.8 MB[0m [31m7.6 MB/s[0m eta [36m0:00:20[0m[2K   [38;2;249;38;114m━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m7.6/150.8 MB[0m [31m7.6 MB/s[0m eta [36m0:00:19[0m[2K   [38;2;249;38;114m━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m9.4/150.8 MB[0m [31m7.7 MB/s[0m eta [36m0:00:19[0m[2K   [38;2;249;38;114m━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m11.0/150.8 MB[0m [31m7.7 MB/s[0m eta [36m0:00:19[0m[2K   [38;2;249;38;114m━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m12.6/150.8 MB[0m [31m7.8 MB/s[0m eta [36m0:00:18[0m[2K   [38;2;249;38;114m━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m14.2/150.8 MB[0m [31m7.8 MB/s[0m eta [36m0:00:18[0m[2K   [38;2;249;38;114m━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m16.0/150.8 MB[0m [31m7.9 MB/s[0m eta [36m0:00:18[0m[2K   [38;2;249;38;114m━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m17.6/150.8 MB[0m [31m7.9 MB/s[0m eta [36m0:00:17[0m[2K   [38;2;249;38;114m━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m19.4/150.8 MB[0m [31m7.9 MB/s[0m eta [36m0:00:17[0m[2K   [38;2;249;38;114m━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m21.0/150.8 MB[0m [31m8.0 MB/s[0m eta [36m0:00:17[0m[2K   [38;2;249;38;114m━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m22.5/150.8 MB[0m [31m8.0 MB/s[0m eta [36m0:00:17[0m[2K   [38;2;249;38;114m━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m23.9/150.8 MB[0m [31m8.0 MB/s[0m eta [36m0:00:16[0m[2K   [38;2;249;38;114m━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m25.4/150.8 MB[0m [31m7.9 MB/s[0m eta [36m0:00:16[0m[2K   [38;2;249;38;114m━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m26.7/150.8 MB[0m [31m7.8 MB/s[0m eta [36m0:00:16[0m[2K   [38;2;249;38;114m━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m28.0/150.8 MB[0m [31m7.7 MB/s[0m eta [36m0:00:16[0m[2K   [38;2;249;38;114m━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m29.4/150.8 MB[0m [31m7.6 MB/s[0m eta [36m0:00:16[0m[2K   [38;2;249;38;114m━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m30.7/150.8 MB[0m [31m7.5 MB/s[0m eta [36m0:00:16[0m[2K   [38;2;249;38;114m━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m32.0/150.8 MB[0m [31m7.5 MB/s[0m eta [36m0:00:16[0m[2K   [38;2;249;38;114m━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m33.3/150.8 MB[0m [31m7.4 MB/s[0m eta [36m0:00:16[0m[2K   [38;2;249;38;114m━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m34.6/150.8 MB[0m [31m7.4 MB/s[0m eta [36m0:00:16[0m[2K   [38;2;249;38;114m━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m35.9/150.8 MB[0m [31m7.4 MB/s[0m eta [36m0:00:16[0m[2K   [38;2;249;38;114m━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m37.5/150.8 MB[0m [31m7.3 MB/s[0m eta [36m0:00:16[0m[2K   [38;2;249;38;114m━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m38.8/150.8 MB[0m [31m7.3 MB/s[0m eta [36m0:00:16[0m[2K   [38;2;249;38;114m━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m40.1/150.8 MB[0m [31m7.3 MB/s[0m eta [36m0:00:16[0m[2K   [38;2;249;38;114m━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m41.7/150.8 MB[0m [31m7.3 MB/s[0m eta [36m0:00:15[0m[2K   [38;2;249;38;114m━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m43.0/150.8 MB[0m [31m7.3 MB/s[0m eta [36m0:00:15[0m[2K   [38;2;249;38;114m━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m44.6/150.8 MB[0m [31m7.3 MB/s[0m eta [36m0:00:15[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m45.6/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:15[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m47.2/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:15[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m48.5/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:15[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m50.1/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:14[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m51.4/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:14[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m53.0/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:14[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m54.3/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:14[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m55.8/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:14[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m57.4/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:13[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m58.7/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:13[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m60.3/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:13[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━[0m [32m61.6/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:13[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━[0m [32m63.2/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:13[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━[0m [32m64.5/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:12[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━[0m [32m66.1/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:12[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━[0m [32m67.6/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:12[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━[0m [32m68.9/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:12[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━[0m [32m70.5/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:12[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━[0m [32m72.1/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:11[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━[0m [32m73.4/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:11[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━[0m [32m75.0/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:11[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━[0m [32m76.5/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:11[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━[0m [32m77.9/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:11[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━[0m [32m79.4/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:10[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━[0m [32m81.0/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:10[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━[0m [32m82.6/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:10[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━[0m [32m84.1/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:10[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━[0m [32m85.7/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:09[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━[0m [32m87.3/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:09[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━[0m [32m88.9/150.8 MB[0m [31m7.3 MB/s[0m eta [36m0:00:09[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━[0m [32m90.4/150.8 MB[0m [31m7.3 MB/s[0m eta [36m0:00:09[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━[0m [32m92.0/150.8 MB[0m [31m7.3 MB/s[0m eta [36m0:00:09[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━[0m [32m93.6/150.8 MB[0m [31m7.3 MB/s[0m eta [36m0:00:08[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━[0m [32m95.4/150.8 MB[0m [31m7.3 MB/s[0m eta [36m0:00:08[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━[0m [32m97.0/150.8 MB[0m [31m7.3 MB/s[0m eta [36m0:00:08[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━[0m [32m98.6/150.8 MB[0m [31m7.3 MB/s[0m eta [36m0:00:08[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━[0m [32m100.4/150.8 MB[0m [31m7.3 MB/s[0m eta [36m0:00:07[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━[0m [32m101.7/150.8 MB[0m [31m7.3 MB/s[0m eta [36m0:00:07[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━[0m [32m103.3/150.8 MB[0m [31m7.3 MB/s[0m eta [36m0:00:07[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━[0m [32m104.9/150.8 MB[0m [31m7.3 MB/s[0m eta [36m0:00:07[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━[0m [32m106.7/150.8 MB[0m [31m7.4 MB/s[0m eta [36m0:00:06[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━[0m [32m108.3/150.8 MB[0m [31m7.4 MB/s[0m eta [36m0:00:06[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━[0m [32m109.6/150.8 MB[0m [31m7.3 MB/s[0m eta [36m0:00:06[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━[0m [32m110.9/150.8 MB[0m [31m7.3 MB/s[0m eta [36m0:00:06[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━[0m [32m112.5/150.8 MB[0m [31m7.3 MB/s[0m eta [36m0:00:06[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━[0m [32m113.8/150.8 MB[0m [31m7.3 MB/s[0m eta [36m0:00:06[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━[0m [32m115.3/150.8 MB[0m [31m7.3 MB/s[0m eta [36m0:00:05[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━[0m [32m116.9/150.8 MB[0m [31m7.3 MB/s[0m eta [36m0:00:05[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━[0m [32m118.8/150.8 MB[0m [31m7.4 MB/s[0m eta [36m0:00:05[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━[0m [32m120.3/150.8 MB[0m [31m7.4 MB/s[0m eta [36m0:00:05[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━[0m [32m121.9/150.8 MB[0m [31m7.4 MB/s[0m eta [36m0:00:04[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━[0m [32m123.2/150.8 MB[0m [31m7.4 MB/s[0m eta [36m0:00:04[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━[0m [32m123.7/150.8 MB[0m [31m7.3 MB/s[0m eta [36m0:00:04[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━[0m [32m125.0/150.8 MB[0m [31m7.3 MB/s[0m eta [36m0:00:04[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━[0m [32m126.4/150.8 MB[0m [31m7.3 MB/s[0m eta [36m0:00:04[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━[0m [32m127.4/150.8 MB[0m [31m7.3 MB/s[0m eta [36m0:00:04[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━[0m [32m128.7/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:04[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━[0m [32m130.0/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:03[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━[0m [32m131.6/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:03[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━[0m [32m132.9/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:03[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━[0m [32m134.0/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:03[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━[0m [32m135.5/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:03[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━[0m [32m136.8/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:02[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━[0m [32m138.1/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:02[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━[0m [32m139.7/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:02[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━[0m [32m141.0/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:02[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━[0m [32m142.6/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:02[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━[0m [32m143.9/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━[0m [32m145.2/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━[0m [32m146.8/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m [32m148.4/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m [32m149.7/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m [32m150.7/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m [32m150.7/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m [32m150.7/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m [32m150.7/150.8 MB[0m [31m7.2 MB/s[0m eta [36m0:00:01[0m[2K   [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m150.8/150.8 MB[0m [31m6.9 MB/s[0m eta [36m0:00:00[0m
+[?25hBuilding wheels for collected packages: dj-rest-auth, django-allauth
+  Building wheel for dj-rest-auth (pyproject.toml) ... [?25l- \ | / - \ | done
+[?25h  Created wheel for dj-rest-auth: filename=dj_rest_auth-7.0.1-py2.py3-none-any.whl size=251345 sha256=2e638c9794c13e5b3ced8289892682ad73954f82cd22d701a261ef296c3888f3
+  Stored in directory: /Users/sourav/Library/Caches/pip/wheels/07/e5/7b/eec475bc23d3f13cfbf212867117acda336655d815ddcf5dfe
+  Building wheel for django-allauth (pyproject.toml) ... [?25l- \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | done
+[?25h  Created wheel for django-allauth: filename=django_allauth-65.7.0-py3-none-any.whl size=1773874 sha256=90f5a33096b75f509d6352861fe87f1501566f204f81e3d42704158277035b15
+  Stored in directory: /Users/sourav/Library/Caches/pip/wheels/46/63/66/71a1be7c0179b2dbcebe728446972499efa910fb66ee51b5a6
+Successfully built dj-rest-auth django-allauth
+Installing collected packages: pytz, puremagic, pathlib, mpmath, looseversion, urllib3, uritemplate, tzdata, typing_extensions, traits, tqdm, threadpoolctl, sympy, sqlparse, soupsieve, sniffio, six, simplejson, setuptools, safetensors, regex, PyYAML, pyparsing, PyMuPDF, PyJWT, pycparser, pyasn1, protobuf, pillow, packaging, numpy, networkx, MarkupSafe, lxml, joblib, itsdangerous, idna, h11, grpcio, fsspec, filelock, configparser, configobj, colorama, click, ci-info, charset-normalizer, certifi, cachetools, asgiref, annotated-types, aiofiles, acres, uvicorn, typing-inspection, scipy, rsa, requests, python-dateutil, pydot, pydantic_core, pyasn1_modules, proto-plus, nibabel, Jinja2, isodate, httplib2, googleapis-common-protos, Django, cffi, beautifulsoup4, anyio, torch, starlette, scikit-learn, rdflib, pyxnat, pydantic, pandas, huggingface-hub, grpcio-status, google-auth, google, etelemetry, djangorestframework, django-allauth, cryptography, tokenizers, prov, google-auth-httplib2, google-api-core, frontend, dj-rest-auth, transformers, nipype, google-api-python-client, sentence-transformers, google-ai-generativelanguage, google-generativeai
+Successfully installed Django-5.2 Jinja2-3.1.6 MarkupSafe-3.0.2 PyJWT-2.10.1 PyMuPDF-1.25.5 PyYAML-6.0.2 acres-0.3.0 aiofiles-24.1.0 annotated-types-0.7.0 anyio-4.9.0 asgiref-3.8.1 beautifulsoup4-4.13.4 cachetools-5.5.2 certifi-2025.1.31 cffi-1.17.1 charset-normalizer-3.4.1 ci-info-0.3.0 click-8.1.8 colorama-0.4.6 configobj-5.0.9 configparser-7.2.0 cryptography-44.0.2 dj-rest-auth-7.0.1 django-allauth-65.7.0 djangorestframework-3.16.0 etelemetry-0.3.1 filelock-3.18.0 frontend-0.0.3 fsspec-2025.3.2 google-3.0.0 google-ai-generativelanguage-0.6.15 google-api-core-2.24.2 google-api-python-client-2.167.0 google-auth-2.39.0 google-auth-httplib2-0.2.0 google-generativeai-0.8.5 googleapis-common-protos-1.70.0 grpcio-1.71.0 grpcio-status-1.71.0 h11-0.14.0 httplib2-0.22.0 huggingface-hub-0.30.2 idna-3.10 isodate-0.6.1 itsdangerous-2.2.0 joblib-1.4.2 looseversion-1.3.0 lxml-5.3.2 mpmath-1.3.0 networkx-3.4.2 nibabel-5.3.2 nipype-1.10.0 numpy-2.2.5 packaging-25.0 pandas-2.2.3 pathlib-1.0.1 pillow-11.2.1 proto-plus-1.26.1 protobuf-5.29.4 prov-2.0.1 puremagic-1.28 pyasn1-0.6.1 pyasn1_modules-0.4.2 pycparser-2.22 pydantic-2.11.3 pydantic_core-2.33.1 pydot-3.0.4 pyparsing-3.2.3 python-dateutil-2.9.0.post0 pytz-2025.2 pyxnat-1.6.3 rdflib-6.3.2 regex-2024.11.6 requests-2.32.3 rsa-4.9.1 safetensors-0.5.3 scikit-learn-1.6.1 scipy-1.15.2 sentence-transformers-4.1.0 setuptools-79.0.0 simplejson-3.20.1 six-1.17.0 sniffio-1.3.1 soupsieve-2.7 sqlparse-0.5.3 starlette-0.46.2 sympy-1.13.1 threadpoolctl-3.6.0 tokenizers-0.21.1 torch-2.2.2 tqdm-4.67.1 traits-7.0.2 transformers-4.51.3 typing-inspection-0.4.0 typing_extensions-4.13.2 tzdata-2025.2 uritemplate-4.1.1 urllib3-2.4.0 uvicorn-0.34.2
+
+[1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m A new release of pip is available: [0m[31;49m25.0.1[0m[39;49m -> [0m[32;49m25.1.1[0m
+[1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m To update, run: [0m[32;49mpip install --upgrade pip[0m
+[1m[7m%[27m[1m[0m                                                                                                                 [0m[27m[24m[J(venv) sourav@souravs-MacBook-Pro final-project % [K[?2004hppython3 manage.py[1m [0m[0m y requirements.txt[1m [0m[0m 
+[Jaccounts/         manage.py         requirements.txt  typescript        
+ai/               onenightprep/     session/          venv/             [A[A[0m[27m[24m[50Cpython3 manage.py requirements.txt[K[1C               un server      server[?2004l
+[JWatching for file changes with StatReloader
+Performing system checks...
+
+/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/dj_rest_auth/registration/serializers.py:228: UserWarning: app_settings.USERNAME_REQUIRED is deprecated, use: app_settings.SIGNUP_FIELDS['username']['required']
+  required=allauth_account_settings.USERNAME_REQUIRED,
+/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/dj_rest_auth/registration/serializers.py:230: UserWarning: app_settings.EMAIL_REQUIRED is deprecated, use: app_settings.SIGNUP_FIELDS['email']['required']
+  email = serializers.EmailField(required=allauth_account_settings.EMAIL_REQUIRED)
+/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/dj_rest_auth/registration/serializers.py:288: UserWarning: app_settings.EMAIL_REQUIRED is deprecated, use: app_settings.SIGNUP_FIELDS['email']['required']
+  email = serializers.EmailField(required=allauth_account_settings.EMAIL_REQUIRED)
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.2.5 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "/Users/sourav12/Office/university/final-project/manage.py", line 22, in <module>
+    main()
+  File "/Users/sourav12/Office/university/final-project/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 442, in execute_from_command_line
+    utility.execute()
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 436, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/core/management/base.py", line 416, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 69, in execute
+    super().execute(*args, **options)
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/core/management/base.py", line 460, in execute
+    output = self.handle(*args, **options)
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 110, in handle
+    self.run(**options)
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 117, in run
+    autoreload.run_with_reloader(self.inner_run, **options)
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/utils/autoreload.py", line 670, in run_with_reloader
+    start_django(reloader, main_func, *args, **kwargs)
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/utils/autoreload.py", line 659, in start_django
+    reloader.run(django_main_thread)
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/utils/autoreload.py", line 336, in run
+    get_resolver().urlconf_module
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/Users/sourav12/Office/university/final-project/onenightprep/urls.py", line 8, in <module>
+    path('ai/', include('ai.urls')),
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/Users/sourav12/Office/university/final-project/ai/urls.py", line 2, in <module>
+    from .views import PDFUploadView,PDFQueryView
+  File "/Users/sourav12/Office/university/final-project/ai/views.py", line 6, in <module>
+    from .embedding_service import generate_embedding, compute_similarity,generate_embedding_to_upload
+  File "/Users/sourav12/Office/university/final-project/ai/embedding_service.py", line 1, in <module>
+    from sentence_transformers import SentenceTransformer, util
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/sentence_transformers/__init__.py", line 9, in <module>
+    from sentence_transformers.backend import (
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/sentence_transformers/backend.py", line 11, in <module>
+    from sentence_transformers.util import disable_datasets_caching, is_datasets_available
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/sentence_transformers/util.py", line 17, in <module>
+    import torch
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/torch/__init__.py", line 1477, in <module>
+    from .functional import *  # noqa: F403
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/torch/functional.py", line 9, in <module>
+    import torch.nn.functional as F
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/torch/nn/__init__.py", line 1, in <module>
+    from .modules import *  # noqa: F403
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/torch/nn/modules/__init__.py", line 35, in <module>
+    from .transformer import TransformerEncoder, TransformerDecoder, \
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/torch/nn/modules/transformer.py", line 20, in <module>
+    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at /Users/runner/work/pytorch/pytorch/pytorch/torch/csrc/utils/tensor_numpy.cpp:84.)
+  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+modules.json:   0%|                                                                    | 0.00/349 [00:00<?, ?B/s]modules.json: 100%|██████████████████████████████████████████████████████████████| 349/349 [00:00<00:00, 170kB/s]
+config_sentence_transformers.json:   0%|                                               | 0.00/116 [00:00<?, ?B/s]config_sentence_transformers.json: 100%|█████████████████████████████████████████| 116/116 [00:00<00:00, 229kB/s]
+README.md:   0%|                                                                     | 0.00/10.5k [00:00<?, ?B/s]README.md: 100%|████████████████████████████████████████████████████████████| 10.5k/10.5k [00:00<00:00, 15.3MB/s]
+sentence_bert_config.json:   0%|                                                      | 0.00/53.0 [00:00<?, ?B/s]sentence_bert_config.json: 100%|███████████████████████████████████████████████| 53.0/53.0 [00:00<00:00, 264kB/s]
+config.json:   0%|                                                                     | 0.00/612 [00:00<?, ?B/s]config.json: 100%|███████████████████████████████████████████████████████████████| 612/612 [00:00<00:00, 895kB/s]
+Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+model.safetensors:   0%|                                                             | 0.00/90.9M [00:00<?, ?B/s]model.safetensors:  12%|██████                                              | 10.5M/90.9M [00:01<00:10, 7.60MB/s]model.safetensors:  23%|████████████                                        | 21.0M/90.9M [00:02<00:08, 8.11MB/s]model.safetensors:  35%|██████████████████                                  | 31.5M/90.9M [00:04<00:07, 7.79MB/s]model.safetensors:  46%|████████████████████████                            | 41.9M/90.9M [00:05<00:06, 7.62MB/s]model.safetensors:  58%|██████████████████████████████                      | 52.4M/90.9M [00:06<00:05, 7.52MB/s]model.safetensors:  69%|████████████████████████████████████                | 62.9M/90.9M [00:08<00:03, 7.48MB/s]model.safetensors:  81%|██████████████████████████████████████████          | 73.4M/90.9M [00:09<00:02, 7.45MB/s]model.safetensors:  92%|████████████████████████████████████████████████    | 83.9M/90.9M [00:11<00:00, 7.40MB/s]model.safetensors: 100%|████████████████████████████████████████████████████| 90.9M/90.9M [00:12<00:00, 7.42MB/s]model.safetensors: 100%|████████████████████████████████████████████████████| 90.9M/90.9M [00:12<00:00, 7.52MB/s]
+tokenizer_config.json:   0%|                                                           | 0.00/350 [00:00<?, ?B/s]tokenizer_config.json: 100%|████████████████████████████████████████████████████| 350/350 [00:00<00:00, 1.79MB/s]
+vocab.txt:   0%|                                                                      | 0.00/232k [00:00<?, ?B/s]vocab.txt: 100%|██████████████████████████████████████████████████████████████| 232k/232k [00:00<00:00, 1.62MB/s]vocab.txt: 100%|██████████████████████████████████████████████████████████████| 232k/232k [00:00<00:00, 1.61MB/s]
+tokenizer.json:   0%|                                                                 | 0.00/466k [00:00<?, ?B/s]tokenizer.json: 100%|█████████████████████████████████████████████████████████| 466k/466k [00:00<00:00, 2.19MB/s]tokenizer.json: 100%|█████████████████████████████████████████████████████████| 466k/466k [00:00<00:00, 2.18MB/s]
+special_tokens_map.json:   0%|                                                         | 0.00/112 [00:00<?, ?B/s]special_tokens_map.json: 100%|███████████████████████████████████████████████████| 112/112 [00:00<00:00, 592kB/s]
+config.json:   0%|                                                                     | 0.00/190 [00:00<?, ?B/s]config.json: 100%|██████████████████████████████████████████████████████████████| 190/190 [00:00<00:00, 1.01MB/s]
+System check identified some issues:
+
+WARNINGS:
+[33;1m?: (staticfiles.W004) The directory '/Users/sourav12/Office/university/final-project/frontend/assets' in the STATICFILES_DIRS setting does not exist.[0m
+[33;1m?: settings.ACCOUNT_AUTHENTICATION_METHOD is deprecated, use: settings.ACCOUNT_LOGIN_METHODS = {'email'}[0m
+[33;1m?: settings.ACCOUNT_EMAIL_REQUIRED is deprecated, use: settings.ACCOUNT_SIGNUP_FIELDS = ['email*', 'password1*', 'password2*'][0m
+[33;1m?: settings.ACCOUNT_USERNAME_REQUIRED is deprecated, use: settings.ACCOUNT_SIGNUP_FIELDS = ['email*', 'password1*', 'password2*'][0m
+[33;1msession.Session.members: (fields.W340) null has no effect on ManyToManyField.[0m
+
+System check identified 5 issues (0 silenced).
+[31m
+You have 39 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): account, accounts, admin, auth, authtoken, contenttypes, session, sessions, socialaccount.[0m
+[31mRun 'python manage.py migrate' to apply them.[0m
+May 03, 2025 - 08:36:02
+Django version 5.2, using settings 'onenightprep.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+[33;1mWARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/[0m
+Not Found: /
+[03/May/2025 08:36:28] [33m"GET / HTTP/1.1" 404 2612[0m
+Not Found: /favicon.ico
+[03/May/2025 08:36:29] [33m"GET /favicon.ico HTTP/1.1" 404 2663[0m
+[03/May/2025 08:36:37] [32m"GET /admin HTTP/1.1" 301 0[0m
+[03/May/2025 08:36:37] [32m"GET /admin/ HTTP/1.1" 302 0[0m
+[03/May/2025 08:36:37] [m"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4181[0m
+[03/May/2025 08:36:37] [m"GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2808[0m
+[03/May/2025 08:36:37] [m"GET /static/admin/css/login.css HTTP/1.1" 200 951[0m
+[03/May/2025 08:36:37] [m"GET /static/admin/js/theme.js HTTP/1.1" 200 1653[0m
+[03/May/2025 08:36:37] [m"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810[0m
+[03/May/2025 08:36:37] [m"GET /static/admin/css/base.css HTTP/1.1" 200 22154[0m
+[03/May/2025 08:36:37] [m"GET /static/admin/css/responsive.css HTTP/1.1" 200 16632[0m
+[03/May/2025 08:36:37] [m"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063[0m
+Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: account_emailaddress
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/contrib/admin/sites.py", line 449, in login
+    return LoginView.as_view(**defaults)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/views/decorators/debug.py", line 143, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/contrib/auth/views.py", line 89, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/views/generic/edit.py", line 150, in post
+    if form.is_valid():
+       ^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/forms/forms.py", line 206, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/forms/forms.py", line 201, in errors
+    self.full_clean()
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/forms/forms.py", line 338, in full_clean
+    self._clean_form()
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/forms/forms.py", line 354, in _clean_form
+    cleaned_data = self.clean()
+                   ^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/views/decorators/debug.py", line 75, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/contrib/auth/forms.py", line 366, in clean
+    self.user_cache = authenticate(
+                      ^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/views/decorators/debug.py", line 75, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/contrib/auth/__init__.py", line 114, in authenticate
+    user = backend.authenticate(request, **credentials)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/allauth/account/auth_backends.py", line 22, in authenticate
+    user = self._authenticate(request, **credentials)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/allauth/account/auth_backends.py", line 37, in _authenticate
+    user = self._authenticate_by_email(username, password)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/allauth/account/auth_backends.py", line 81, in _authenticate_by_email
+    users = filter_users_by_email(email, prefer_verified=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/allauth/account/utils.py", line 319, in filter_users_by_email
+    mails = list(EmailAddress.objects.filter(email=email).select_related("user"))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/db/models/query.py", line 384, in __iter__
+    self._fetch_all()
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1935, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1622, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: account_emailaddress
+[03/May/2025 08:36:40] [35;1m"POST /admin/login/?next=/admin/ HTTP/1.1" 500 253620[0m
+[03/May/2025 08:36:45] [m"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4181[0m
+Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: account_emailaddress
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/contrib/admin/sites.py", line 449, in login
+    return LoginView.as_view(**defaults)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/views/decorators/debug.py", line 143, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/contrib/auth/views.py", line 89, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/views/generic/edit.py", line 150, in post
+    if form.is_valid():
+       ^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/forms/forms.py", line 206, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/forms/forms.py", line 201, in errors
+    self.full_clean()
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/forms/forms.py", line 338, in full_clean
+    self._clean_form()
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/forms/forms.py", line 354, in _clean_form
+    cleaned_data = self.clean()
+                   ^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/views/decorators/debug.py", line 75, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/contrib/auth/forms.py", line 366, in clean
+    self.user_cache = authenticate(
+                      ^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/views/decorators/debug.py", line 75, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/contrib/auth/__init__.py", line 114, in authenticate
+    user = backend.authenticate(request, **credentials)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/allauth/account/auth_backends.py", line 22, in authenticate
+    user = self._authenticate(request, **credentials)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/allauth/account/auth_backends.py", line 37, in _authenticate
+    user = self._authenticate_by_email(username, password)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/allauth/account/auth_backends.py", line 81, in _authenticate_by_email
+    users = filter_users_by_email(email, prefer_verified=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/allauth/account/utils.py", line 319, in filter_users_by_email
+    mails = list(EmailAddress.objects.filter(email=email).select_related("user"))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/db/models/query.py", line 384, in __iter__
+    self._fetch_all()
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1935, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1622, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: account_emailaddress
+[03/May/2025 08:36:52] [35;1m"POST /admin/login/?next=/admin/ HTTP/1.1" 500 253943[0m
+[03/May/2025 08:36:54] [m"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4181[0m
+Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: account_emailaddress
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/contrib/admin/sites.py", line 449, in login
+    return LoginView.as_view(**defaults)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/views/decorators/debug.py", line 143, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/contrib/auth/views.py", line 89, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/views/generic/edit.py", line 150, in post
+    if form.is_valid():
+       ^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/forms/forms.py", line 206, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/forms/forms.py", line 201, in errors
+    self.full_clean()
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/forms/forms.py", line 338, in full_clean
+    self._clean_form()
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/forms/forms.py", line 354, in _clean_form
+    cleaned_data = self.clean()
+                   ^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/views/decorators/debug.py", line 75, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/contrib/auth/forms.py", line 366, in clean
+    self.user_cache = authenticate(
+                      ^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/views/decorators/debug.py", line 75, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/contrib/auth/__init__.py", line 114, in authenticate
+    user = backend.authenticate(request, **credentials)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/allauth/account/auth_backends.py", line 22, in authenticate
+    user = self._authenticate(request, **credentials)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/allauth/account/auth_backends.py", line 37, in _authenticate
+    user = self._authenticate_by_email(username, password)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/allauth/account/auth_backends.py", line 81, in _authenticate_by_email
+    users = filter_users_by_email(email, prefer_verified=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/allauth/account/utils.py", line 319, in filter_users_by_email
+    mails = list(EmailAddress.objects.filter(email=email).select_related("user"))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/db/models/query.py", line 384, in __iter__
+    self._fetch_all()
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1935, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1622, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: account_emailaddress
+[03/May/2025 08:37:03] [35;1m"POST /admin/login/?next=/admin/ HTTP/1.1" 500 253895[0m
+^C[1m[7m%[27m[1m[0m                                                                                                                 [0m[27m[24m[J(venv) sourav@souravs-MacBook-Pro final-project % [K[?2004hppython3 manage.py migrate[?2004l
+/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/dj_rest_auth/registration/serializers.py:228: UserWarning: app_settings.USERNAME_REQUIRED is deprecated, use: app_settings.SIGNUP_FIELDS['username']['required']
+  required=allauth_account_settings.USERNAME_REQUIRED,
+/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/dj_rest_auth/registration/serializers.py:230: UserWarning: app_settings.EMAIL_REQUIRED is deprecated, use: app_settings.SIGNUP_FIELDS['email']['required']
+  email = serializers.EmailField(required=allauth_account_settings.EMAIL_REQUIRED)
+/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/dj_rest_auth/registration/serializers.py:288: UserWarning: app_settings.EMAIL_REQUIRED is deprecated, use: app_settings.SIGNUP_FIELDS['email']['required']
+  email = serializers.EmailField(required=allauth_account_settings.EMAIL_REQUIRED)
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.2.5 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "/Users/sourav12/Office/university/final-project/manage.py", line 22, in <module>
+    main()
+  File "/Users/sourav12/Office/university/final-project/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 442, in execute_from_command_line
+    utility.execute()
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 436, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/core/management/base.py", line 416, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/core/management/base.py", line 457, in execute
+    self.check(**check_kwargs)
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/core/management/base.py", line 492, in check
+    all_issues = checks.run_checks(
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/core/checks/urls.py", line 136, in check_custom_error_handlers
+    handler = resolver.resolve_error_handler(status_code)
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 732, in resolve_error_handler
+    callback = getattr(self.urlconf_module, "handler%s" % view_type, None)
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/Users/sourav12/Office/university/final-project/onenightprep/urls.py", line 8, in <module>
+    path('ai/', include('ai.urls')),
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/Users/sourav12/Office/university/final-project/ai/urls.py", line 2, in <module>
+    from .views import PDFUploadView,PDFQueryView
+  File "/Users/sourav12/Office/university/final-project/ai/views.py", line 6, in <module>
+    from .embedding_service import generate_embedding, compute_similarity,generate_embedding_to_upload
+  File "/Users/sourav12/Office/university/final-project/ai/embedding_service.py", line 1, in <module>
+    from sentence_transformers import SentenceTransformer, util
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/sentence_transformers/__init__.py", line 9, in <module>
+    from sentence_transformers.backend import (
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/sentence_transformers/backend.py", line 11, in <module>
+    from sentence_transformers.util import disable_datasets_caching, is_datasets_available
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/sentence_transformers/util.py", line 17, in <module>
+    import torch
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/torch/__init__.py", line 1477, in <module>
+    from .functional import *  # noqa: F403
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/torch/functional.py", line 9, in <module>
+    import torch.nn.functional as F
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/torch/nn/__init__.py", line 1, in <module>
+    from .modules import *  # noqa: F403
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/torch/nn/modules/__init__.py", line 35, in <module>
+    from .transformer import TransformerEncoder, TransformerDecoder, \
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/torch/nn/modules/transformer.py", line 20, in <module>
+    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at /Users/runner/work/pytorch/pytorch/pytorch/torch/csrc/utils/tensor_numpy.cpp:84.)
+  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+System check identified some issues:
+
+WARNINGS:
+[33;1m?: (staticfiles.W004) The directory '/Users/sourav12/Office/university/final-project/frontend/assets' in the STATICFILES_DIRS setting does not exist.[0m
+[33;1m?: settings.ACCOUNT_AUTHENTICATION_METHOD is deprecated, use: settings.ACCOUNT_LOGIN_METHODS = {'email'}[0m
+[33;1m?: settings.ACCOUNT_EMAIL_REQUIRED is deprecated, use: settings.ACCOUNT_SIGNUP_FIELDS = ['email*', 'password1*', 'password2*'][0m
+[33;1m?: settings.ACCOUNT_USERNAME_REQUIRED is deprecated, use: settings.ACCOUNT_SIGNUP_FIELDS = ['email*', 'password1*', 'password2*'][0m
+[33;1msession.Session.members: (fields.W340) null has no effect on ManyToManyField.[0m
+[36;1mOperations to perform:[0m
+[1m  Apply all migrations: [0maccount, accounts, admin, auth, authtoken, contenttypes, session, sessions, socialaccount
+[36;1mRunning migrations:[0m
+  Applying contenttypes.0001_initial...[32;1m OK[0m
+  Applying contenttypes.0002_remove_content_type_name...[32;1m OK[0m
+  Applying auth.0001_initial...[32;1m OK[0m
+  Applying auth.0002_alter_permission_name_max_length...[32;1m OK[0m
+  Applying auth.0003_alter_user_email_max_length...[32;1m OK[0m
+  Applying auth.0004_alter_user_username_opts...[32;1m OK[0m
+  Applying auth.0005_alter_user_last_login_null...[32;1m OK[0m
+  Applying auth.0006_require_contenttypes_0002...[32;1m OK[0m
+  Applying auth.0007_alter_validators_add_error_messages...[32;1m OK[0m
+  Applying auth.0008_alter_user_username_max_length...[32;1m OK[0m
+  Applying auth.0009_alter_user_last_name_max_length...[32;1m OK[0m
+  Applying auth.0010_alter_group_name_max_length...[32;1m OK[0m
+  Applying auth.0011_update_proxy_permissions...[32;1m OK[0m
+  Applying auth.0012_alter_user_first_name_max_length...[32;1m OK[0m
+  Applying accounts.0001_initial...[32;1m OK[0m
+  Applying account.0001_initial...[32;1m OK[0m
+  Applying account.0002_email_max_length...[32;1m OK[0m
+  Applying account.0003_alter_emailaddress_create_unique_verified_email...[32;1m OK[0m
+  Applying account.0004_alter_emailaddress_drop_unique_email...[32;1m OK[0m
+  Applying account.0005_emailaddress_idx_upper_email...[32;1m OK[0m
+  Applying account.0006_emailaddress_lower...[32;1m OK[0m
+  Applying account.0007_emailaddress_idx_email...[32;1m OK[0m
+  Applying account.0008_emailaddress_unique_primary_email_fixup...[32;1m OK[0m
+  Applying account.0009_emailaddress_unique_primary_email...[32;1m OK[0m
+  Applying admin.0001_initial...[32;1m OK[0m
+  Applying admin.0002_logentry_remove_auto_add...[32;1m OK[0m
+  Applying admin.0003_logentry_add_action_flag_choices...[32;1m OK[0m
+  Applying authtoken.0001_initial...[32;1m OK[0m
+  Applying authtoken.0002_auto_20160226_1747...[32;1m OK[0m
+  Applying authtoken.0003_tokenproxy...[32;1m OK[0m
+  Applying authtoken.0004_alter_tokenproxy_options...[32;1m OK[0m
+  Applying session.0001_initial...[32;1m OK[0m
+  Applying sessions.0001_initial...[32;1m OK[0m
+  Applying socialaccount.0001_initial...[32;1m OK[0m
+  Applying socialaccount.0002_token_max_lengths...[32;1m OK[0m
+  Applying socialaccount.0003_extra_data_default_dict...[32;1m OK[0m
+  Applying socialaccount.0004_app_provider_id_settings...[32;1m OK[0m
+  Applying socialaccount.0005_socialtoken_nullable_app...[32;1m OK[0m
+  Applying socialaccount.0006_alter_socialaccount_extra_data...[32;1m OK[0m
+[1m[7m%[27m[1m[0m                                                                                                                 [0m[27m[24m[J(venv) sourav@souravs-MacBook-Pro final-project % [K[?2004hpython3 manage.py migraterunserver[?2004l
+Watching for file changes with StatReloader
+Performing system checks...
+
+/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/dj_rest_auth/registration/serializers.py:228: UserWarning: app_settings.USERNAME_REQUIRED is deprecated, use: app_settings.SIGNUP_FIELDS['username']['required']
+  required=allauth_account_settings.USERNAME_REQUIRED,
+/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/dj_rest_auth/registration/serializers.py:230: UserWarning: app_settings.EMAIL_REQUIRED is deprecated, use: app_settings.SIGNUP_FIELDS['email']['required']
+  email = serializers.EmailField(required=allauth_account_settings.EMAIL_REQUIRED)
+/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/dj_rest_auth/registration/serializers.py:288: UserWarning: app_settings.EMAIL_REQUIRED is deprecated, use: app_settings.SIGNUP_FIELDS['email']['required']
+  email = serializers.EmailField(required=allauth_account_settings.EMAIL_REQUIRED)
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.2.5 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "/Users/sourav12/Office/university/final-project/manage.py", line 22, in <module>
+    main()
+  File "/Users/sourav12/Office/university/final-project/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 442, in execute_from_command_line
+    utility.execute()
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 436, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/core/management/base.py", line 416, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 69, in execute
+    super().execute(*args, **options)
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/core/management/base.py", line 460, in execute
+    output = self.handle(*args, **options)
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 110, in handle
+    self.run(**options)
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 117, in run
+    autoreload.run_with_reloader(self.inner_run, **options)
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/utils/autoreload.py", line 670, in run_with_reloader
+    start_django(reloader, main_func, *args, **kwargs)
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/utils/autoreload.py", line 659, in start_django
+    reloader.run(django_main_thread)
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/utils/autoreload.py", line 336, in run
+    get_resolver().urlconf_module
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/Users/sourav12/Office/university/final-project/onenightprep/urls.py", line 8, in <module>
+    path('ai/', include('ai.urls')),
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/Users/sourav12/Office/university/final-project/ai/urls.py", line 2, in <module>
+    from .views import PDFUploadView,PDFQueryView
+  File "/Users/sourav12/Office/university/final-project/ai/views.py", line 6, in <module>
+    from .embedding_service import generate_embedding, compute_similarity,generate_embedding_to_upload
+  File "/Users/sourav12/Office/university/final-project/ai/embedding_service.py", line 1, in <module>
+    from sentence_transformers import SentenceTransformer, util
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/sentence_transformers/__init__.py", line 9, in <module>
+    from sentence_transformers.backend import (
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/sentence_transformers/backend.py", line 11, in <module>
+    from sentence_transformers.util import disable_datasets_caching, is_datasets_available
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/sentence_transformers/util.py", line 17, in <module>
+    import torch
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/torch/__init__.py", line 1477, in <module>
+    from .functional import *  # noqa: F403
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/torch/functional.py", line 9, in <module>
+    import torch.nn.functional as F
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/torch/nn/__init__.py", line 1, in <module>
+    from .modules import *  # noqa: F403
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/torch/nn/modules/__init__.py", line 35, in <module>
+    from .transformer import TransformerEncoder, TransformerDecoder, \
+  File "/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/torch/nn/modules/transformer.py", line 20, in <module>
+    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+/Users/sourav12/Office/university/final-project/venv/lib/python3.12/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at /Users/runner/work/pytorch/pytorch/pytorch/torch/csrc/utils/tensor_numpy.cpp:84.)
+  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+System check identified some issues:
+
+WARNINGS:
+[33;1m?: (staticfiles.W004) The directory '/Users/sourav12/Office/university/final-project/frontend/assets' in the STATICFILES_DIRS setting does not exist.[0m
+[33;1m?: settings.ACCOUNT_AUTHENTICATION_METHOD is deprecated, use: settings.ACCOUNT_LOGIN_METHODS = {'email'}[0m
+[33;1m?: settings.ACCOUNT_EMAIL_REQUIRED is deprecated, use: settings.ACCOUNT_SIGNUP_FIELDS = ['email*', 'password1*', 'password2*'][0m
+[33;1m?: settings.ACCOUNT_USERNAME_REQUIRED is deprecated, use: settings.ACCOUNT_SIGNUP_FIELDS = ['email*', 'password1*', 'password2*'][0m
+[33;1msession.Session.members: (fields.W340) null has no effect on ManyToManyField.[0m
+
+System check identified 5 issues (0 silenced).
+May 03, 2025 - 08:38:09
+Django version 5.2, using settings 'onenightprep.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+[33;1mWARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/[0m
+[03/May/2025 08:38:41] [m"POST /admin/login/?next=/admin/ HTTP/1.1" 200 4366[0m
+[03/May/2025 08:38:41] [36m"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0[0m
+[03/May/2025 08:38:41] [36m"GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0[0m
+[03/May/2025 08:38:41] [36m"GET /static/admin/css/base.css HTTP/1.1" 304 0[0m
+[03/May/2025 08:38:41] [36m"GET /static/admin/css/login.css HTTP/1.1" 304 0[0m
+[03/May/2025 08:38:41] [36m"GET /static/admin/css/responsive.css HTTP/1.1" 304 0[0m
+[03/May/2025 08:38:41] [36m"GET /static/admin/js/theme.js HTTP/1.1" 304 0[0m
+[03/May/2025 08:38:41] [36m"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0[0m
+[03/May/2025 08:38:54] [m"POST /admin/login/?next=/admin/ HTTP/1.1" 200 4366[0m
+[03/May/2025 08:41:33] [m"POST /admin/login/?next=/admin/ HTTP/1.1" 200 4366[0m
+[03/May/2025 08:41:33] [36m"GET /static/admin/css/base.css HTTP/1.1" 304 0[0m
+[03/May/2025 08:41:33] [36m"GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0[0m
+[03/May/2025 08:41:33] [36m"GET /static/admin/css/login.css HTTP/1.1" 304 0[0m
+[03/May/2025 08:41:33] [36m"GET /static/admin/css/responsive.css HTTP/1.1" 304 0[0m
+[03/May/2025 08:41:33] [36m"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0[0m
+[03/May/2025 08:41:33] [36m"GET /static/admin/js/theme.js HTTP/1.1" 304 0[0m
+[03/May/2025 08:41:33] [36m"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0[0m
+[03/May/2025 08:41:41] [m"POST /admin/login/?next=/admin/ HTTP/1.1" 200 4347[0m
+[03/May/2025 08:41:52] [32m"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0[0m
+[03/May/2025 08:41:52] [m"GET /admin/ HTTP/1.1" 200 17453[0m
+[03/May/2025 08:41:52] [m"GET /static/admin/css/dashboard.css HTTP/1.1" 200 441[0m
+[03/May/2025 08:41:52] [m"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331[0m
+[03/May/2025 08:41:52] [m"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380[0m
+[03/May/2025 08:44:07] [m"GET /admin/ HTTP/1.1" 200 17453[0m
