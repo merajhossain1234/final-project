@@ -8,7 +8,7 @@ class SignupSerializer(serializers.ModelSerializer):
     password1 = serializers.CharField(write_only=True)
     class Meta:
         model = User
-        fields = ['email','password','password1','whatsapp_number']
+        fields = ['email','first_name','password','password1','whatsapp_number']
         extra_kwargs = {
             'password':{'write_only':True}
         }
