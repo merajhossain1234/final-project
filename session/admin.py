@@ -10,7 +10,7 @@ class SessionMemberAdmin(admin.ModelAdmin):
 
 @admin.register(Session)
 class SessionAdmin(admin.ModelAdmin):
-    list_display = ['creator']
+    list_display = ['creator','session_name']
     search_fields = ['creator__email']
     filter_horizontal = ['members']  
 

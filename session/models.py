@@ -14,6 +14,7 @@ class SessionMember(ParentModel):
 # session model
 class Session(ParentModel):
     creator = models.ForeignKey(User, on_delete=models.CASCADE)
+    session_name = models.CharField(max_length=100, null=True, blank=True)
     members = models.ManyToManyField(SessionMember, related_name="members",null=True,blank=True)
 
 # document model

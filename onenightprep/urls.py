@@ -7,4 +7,5 @@ urlpatterns = [
     path('accounts/', include('accounts.urls')),
     path('ai/', include('ai.urls')),
     path('session/', include('session.urls')),
+    path('video/', include('videosummerization.urls')),
 ]
