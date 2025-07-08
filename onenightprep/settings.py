@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'accounts',
     'ai',
     'session',
+    'videosummerization',
     'rest_framework',
     'rest_framework.authtoken',
     'dj_rest_auth',
