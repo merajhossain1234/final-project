@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import SignupView,LoginView, GoogleLogin
+from .views import *
 from .Views.forgot_password_otp import ForgotPasswordOTP,VerifyOTP,ResetPassword
 from .Views.user_verification import VerifyUserOTP,SendVerificationOTP
 
@@ -12,4 +12,5 @@ urlpatterns = [
     path('verify-user',VerifyUserOTP.as_view(),name='verify-user-with-otp'),
     path('reset-password',ResetPassword.as_view(),name='reset-password'),
     path('google/login', GoogleLogin.as_view(), name='google_login'),
+    path("get/user", GetUserDetailView.as_view(), name="get-user"),
 ]
