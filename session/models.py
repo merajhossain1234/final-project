@@ -31,7 +31,7 @@ class Document(ParentModel):
     
 # youtube  model
 class Youtube(ParentModel):
-    type = models.CharField(max_length=50)
+    type = models.CharField(max_length=50,null=True,blank=True)
     title = models.CharField(max_length=100)
     link = models.CharField(max_length=100)
     text = models.TextField()
