@@ -2,7 +2,7 @@ from .models import User
 from rest_framework import serializers
 from django.contrib.auth.password_validation import validate_password
 from rest_framework.authtoken.models import Token
-
+from django.contrib.auth import get_user_model
 # Signup serializer for email based registration
 class SignupSerializer(serializers.ModelSerializer):
     password1 = serializers.CharField(write_only=True)
@@ -55,4 +55,26 @@ class LoginSerializer(serializers.ModelSerializer):
                 raise serializers.ValidationError({'email':'User not found'})
         else:
             raise serializers.ValidationError({'email':'Email and password are required'})
-           
+
+
+
+class UserViewSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = get_user_model()
+        fields = [
+            'id',
+            'username',
+            'first_name',
+            'last_name',
+            'email',
+            'is_active',
+            'is_staff',
+            'is_superuser',
+            'date_joined',
+            'last_login',
+            'attributes',
+        ]
+        read_only_fields = [
+            'id',
+            'email'
+        ]

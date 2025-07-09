@@ -9,7 +9,7 @@ urlpatterns = [
     # path('sessions/remove_member/<int:session_id>', RemoveMemberAPIView.as_view(), name='session-remove-member'),
     # path('session-members', SessionMemberAPIView.as_view(), name='sessionmember-list'),
     # path('session-members/<int:id>', SessionMemberAPIView.as_view(), name='sessionmember-detail'),
-
+    path('documents/<int:session_id>', DocumentListView.as_view(), name='document-list'),
 
 
     path('notes/create', NoteCreateAPIView.as_view(), name='note-create'),

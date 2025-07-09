@@ -210,3 +210,25 @@ class NoteListAPIView(APIView):
         notes = Note.objects.filter(session=session, user=request.user)
         serializer = NoteSerializer(notes, many=True)
         return Response(serializer.data)
+    
+
+from rest_framework import generics
+from rest_framework.permissions import IsAuthenticated
+from .models import Document
+from session.serializers import DocumentSerializer
+
+
+
+class DocumentListView(generics.ListAPIView):
+    serializer_class = DocumentSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_queryset(self):
+        # Retrieve the user and session from the request parameters (either URL or query params)
+        user = self.request.user  # Use the authenticated user (if filtering by current user)
+        session_id = self.kwargs.get('session_id')  # You can also get this from query params if needed
+        
+        # Filter the documents by the authenticated user and session
+        queryset = Document.objects.filter(user=user, session_id=session_id)
+
+        return queryset

@@ -63,4 +63,15 @@ class LoginView(generics.GenericAPIView):
             'email': user.email,
             'message': 'Login successful.'
         }, status=status.HTTP_200_OK)
-    
+
+
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.views import APIView
+from .serializers import UserViewSerializer
+class GetUserDetailView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request, *args, **kwargs):
+        user = request.user
+        serializer = UserViewSerializer(user)
+        return Response(serializer.data)
