@@ -14,223 +14,153 @@ from io import BytesIO
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from session.models import Youtube, YoutubeSummery
-from .serializers import YoutubeSerializer
+from session.models import Youtube, YoutubeSummery, TextSummery 
+from .serializers import YoutubeSerializer, YoutubeCreateSerializer
+from videosummerization.serializers import TextSummerySerializer
 
 # Initialize the summarizer model
 summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
 
-@api_view(['POST'])
-def get_summary(request):
-    video_url = request.data.get('video_url', None)
-    audio_url = request.data.get('audio_url', None)
-    text = request.data.get('text', None)
-    
-    if not any([video_url, audio_url, text]):
-        return Response({"error": "Provide either video_url, audio_url, or text for summarization."}, status=400)
-    
-    # Process Video URL (YouTube)
-    if video_url:
-        # Extract YouTube video ID from URL
-        video_id = extract_youtube_video_id(video_url)
-        if not video_id:
-            return Response({"error": "Invalid YouTube URL"}, status=400)
-
-        try:
-            youtube = Youtube.objects.get(link=video_url)
-        
-            # Check if the summary already exists for this YouTube video
-            summary_exists = YoutubeSummery.objects.filter(youtube=youtube).first()
-            if summary_exists:
-                # If summary exists, return the existing summary
-                return Response({"summary": summary_exists.summary})
-
-            # If no summary exists, proceed to fetch the transcript and generate a summary
-            transcript = YouTubeTranscriptApi.get_transcript(video_id)
-            text = "\n".join([item['text'] for item in transcript])
-            
-            # Generate the summary using the extracted text
-            summary = summarize_text(text)
-
-            # Save the summary for future use
-            YoutubeSummery.objects.create(youtube=youtube, summary=summary)
-
-            return Response({"summary": summary})
-
-        except Exception as e:
-            return Response({"error": f"Error fetching transcript: {str(e)}"}, status=500)
-
-    # Process Audio URL
-    elif audio_url:
-        try:
-            audio_text = extract_audio_text(audio_url)
-            summary = summarize_text(audio_text)
-            return Response({"summary": summary})
-        except Exception as e:
-            return Response({"error": f"Error processing audio: {str(e)}"}, status=500)
-
-    # If text is provided directly
-    if text:
-        summary = summarize_text(text)
-        return Response({"summary": summary})
-
-def extract_youtube_video_id(url):
-    """
-    Extracts YouTube video ID from a YouTube URL.
-    """
-    video_id_match = re.search(r"(?:youtu\.be/|youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*\?v=))([^""&?\/\s]+)", url)
-    return video_id_match.group(1) if video_id_match else None
-
-def extract_audio_text(audio_url):
-    """
-    Extracts text from an audio file (MP3, WAV) using speech recognition.
-    """
-    try:
-        # Download the audio file from the URL
-        response = requests.get(audio_url)
-        audio = AudioSegment.from_mp3(BytesIO(response.content))  # Convert MP3 to WAV
-        audio_path = "/tmp/temp_audio.wav"
-        audio.export(audio_path, format="wav")  # Export to a temporary WAV file
-        
-        # Perform speech recognition
-        recognizer = sr.Recognizer()
-        with sr.AudioFile(audio_path) as source:
-            audio_data = recognizer.record(source)
-            text = recognizer.recognize_google(audio_data)
-        
-        return text
-
-    except Exception as e:
-        raise Exception(f"Error processing audio: {str(e)}")
-    
 def summarize_text(text):
     """
     Use a pre-trained summarization model to summarize the transcript or text.
     """
+    # Check if the text is empty or too short
+    if not text or len(text.strip()) < 5:
+        return "Text is too short or empty to summarize."
+
+    # Debugging output (optional, can be removed later)
+    print(f"Input text length: {len(text)}")
+    print(f"Input text preview: {text[:200]}...")  # Preview first 200 chars for debugging
+    
     try:
+        # Check if the text is too long, and break it into chunks if necessary
+        if len(text.split()) > 1000:  # If the text exceeds 1000 words, break it into chunks
+            text_chunks = [text[i:i+1000] for i in range(0, len(text), 1000)]
+            summaries = []
+            for chunk in text_chunks:
+                chunk_summary = summarizer(chunk, max_length=200, min_length=50, do_sample=False)
+                summaries.append(chunk_summary[0]['summary_text'])
+            return " ".join(summaries)
+        
+        # If the text length is reasonable, summarize it directly
         summarized = summarizer(text, max_length=200, min_length=50, do_sample=False)
-        return summarized[0]['summary_text']
+        
+        # Ensure we have the result and it is properly structured
+        if summarized and isinstance(summarized, list) and len(summarized) > 0:
+            return summarized[0]['summary_text']
+        else:
+            return "Error: Summarizer returned an empty or invalid result."
+
     except Exception as e:
         return f"Error summarizing text: {str(e)}"
 
-# from rest_framework.response import Response
-# from rest_framework.decorators import api_view
-# from youtube_transcript_api import YouTubeTranscriptApi
-# from youtube_transcript_api.formatters import TextFormatter
-# from transformers import pipeline
-# import requests
-# import re
-# import speech_recognition as sr
-# from pydub import AudioSegment
-# from io import BytesIO
 
-# # Summarizer initialization
-# summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
-
-# @api_view(['POST'])
-# def get_summary(request):
-#     video_url = request.data.get('video_url', None)
-#     audio_url = request.data.get('audio_url', None)
-#     text = request.data.get('text', None)
+@api_view(['POST'])
+def get_summary(request):
+    text = request.data.get('text', None)
+    session_id = request.data.get('session', None)  # Extract the session ID from the request
     
-#     if not any([video_url, audio_url, text]):
-#         return Response({"error": "Provide either video_url, audio_url, or text for summarization."}, status=400)
+    # If text or session is not provided, return an error
+    if not text:
+        return Response({"error": "Text is required"}, status=400)
+    if not session_id:
+        return Response({"error": "Session is required"}, status=400)
     
-#     # Process Video URL (YouTube)
-#     if video_url:
-#         # Extract YouTube video ID from URL
-#         video_id = extract_youtube_video_id(video_url)
-#         if not video_id:
-#             return Response({"error": "Invalid YouTube URL"}, status=400)
-
-#         try:
-
-#             transcript = YouTubeTranscriptApi.get_transcript(video_id)
-#             text = "\n".join([item['text'] for item in transcript])
-#         except Exception as e:
-#             return Response({"error": f"Error fetching transcript: {str(e)}"}, status=500)
-
-#     # Process Audio URL
-#     elif audio_url:
-#         try:
-#             audio_text = extract_audio_text(audio_url)
-#             text = audio_text
-#         except Exception as e:
-#             return Response({"error": f"Error processing audio: {str(e)}"}, status=500)
-
-#     # If text is provided directly
-#     if text:
-#         summary = summarize_text(text)
-#         return Response({"summary": summary})
-
-# def extract_youtube_video_id(url):
-#     """
-#     Extracts YouTube video ID from a YouTube URL.
-#     """
-#     video_id_match = re.search(r"(?:youtu\.be/|youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*\?v=))([^""&?\/\s]+)", url)
-#     return video_id_match.group(1) if video_id_match else None
-
-# def extract_audio_text(audio_url):
-#     """
-#     Extracts text from an audio file (MP3, WAV) using speech recognition.
-#     """
-#     try:
-#         # Download the audio file from the URL
-#         response = requests.get(audio_url)
-#         audio = AudioSegment.from_mp3(BytesIO(response.content))  # Convert MP3 to WAV
-#         audio_path = "/tmp/temp_audio.wav"
-#         audio.export(audio_path, format="wav")  # Export to a temporary WAV file
+    try:
+        # Fetch the session using the session_id (ensure the session exists)
+        session = Session.objects.get(id=session_id)
         
-#         # Perform speech recognition
-#         recognizer = sr.Recognizer()
-#         with sr.AudioFile(audio_path) as source:
-#             audio_data = recognizer.record(source)
-#             text = recognizer.recognize_google(audio_data)
-        
-#         return text
+        # Summarize the provided text
+        summary = summarize_text(text)
 
-#     except Exception as e:
-#         raise Exception(f"Error processing audio: {str(e)}")
+        # Assuming you want to save the summary for the logged-in user
+        user = request.user  # Get the user from the request (ensure the user is authenticated)
+
+        # Create and save the TextSummery instance
+        text_summary = TextSummery(user=user, session=session, text=text, summery=summary)
+        text_summary.save()
+
+        # Return the summary in the response
+        return Response({"summary": summary})
     
-# def summarize_text(text):
-#     """
-#     Use a pre-trained summarization model to summarize the transcript or text.
-#     """
-#     try:
-#         summarized = summarizer(text, max_length=200, min_length=50, do_sample=False)
-#         return summarized[0]['summary_text']
-#     except Exception as e:
-#         return f"Error summarizing text: {str(e)}"
+    except Session.DoesNotExist:
+        return Response({"error": "Session not found"}, status=400)
+    except Exception as e:
+        return Response({"error": f"An error occurred: {str(e)}"}, status=500)
 
 
 
+from django.shortcuts import get_object_or_404
+class TextSummeryBySessionView(APIView):
+    
+    def get(self, request, *args, **kwargs):
+        # Extract session_id from query parameters
+        session_id = request.query_params.get('session_id', None)
+        
+        # If session_id is not provided, return an error
+        if not session_id:
+            return Response({'error': 'Session ID is required'}, status=status.HTTP_400_BAD_REQUEST)
+
+        try:
+            # Fetch the session object using the session_id
+            session = get_object_or_404(Session, id=session_id)
+            
+            # Retrieve all summaries associated with the session
+            text_summaries = TextSummery.objects.filter(session=session)
+            
+            if not text_summaries.exists():
+                return Response({'message': 'No summaries found for this session.'}, status=status.HTTP_200_OK)
+            # Serialize the summaries
+            serializer = TextSummerySerializer(text_summaries, many=True)
+            return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+
+        except Session.DoesNotExist:
+            return Response({'error': 'Session not found'}, status=status.HTTP_400_BAD_REQUEST)
+        except Exception as e:
+            return Response({'error': f'An error occurred: {str(e)}'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 ###################################33
 
-
+from rest_framework import status
+from rest_framework.response import Response
+from rest_framework.views import APIView
+# from .models import Youtube
+from .serializers import YoutubeCreateSerializer
+from django.core.exceptions import ObjectDoesNotExist
+from session.models import Session
+from accounts.models import User
 
 class YoutubeCreate(APIView):
     def post(self, request):
         user = request.user
-        session = request.data.get('session')
+        session_id = request.data.get('session')  # Get the session ID
         link = request.data.get('link')
 
         # Check if the link already exists for the session and user
-        if Youtube.objects.filter(session=session, user=user, link=link).exists():
+        if Youtube.objects.filter(session_id=session_id, user=user, link=link).exists():
             return Response({"message": "This link already exists for this session and user."}, status=status.HTTP_400_BAD_REQUEST)
 
         # If not, create the Youtube object
-        serializer = YoutubeSerializer(data=request.data)
+        serializer = YoutubeCreateSerializer(data=request.data)
         if serializer.is_valid():
-            serializer.save(user=user, session=session)
+            # Get the actual Session instance
+            session = Session.objects.get(id=session_id)
+            serializer.save(user=user, session=session)  # Assign the session instance
             return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-
 class YoutubeList(APIView):
     def get(self, request):
-        youtubes = Youtube.objects.all()
-        serializer = YoutubeSerializer(youtubes, many=True)
+        session= request.query_params.get('session', None)
+        if session:
+            try:
+                session = Session.objects.get(id=session)
+                youtubes = Youtube.objects.filter(session=session)
+            except Session.DoesNotExist:
+                return Response({"error": "Session not found."}, status=status.HTTP_404_NOT_FOUND)
+        # youtubes = Youtube.objects.all()
+        serializer = YoutubeCreateSerializer(youtubes, many=True)
         return Response(serializer.data)
 
 
@@ -264,3 +194,97 @@ class YoutubeDetail(APIView):
 
         youtube.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+from django.http import JsonResponse
+from youtube_transcript_api import YouTubeTranscriptApi
+import requests
+import logging
+import json
+from django.shortcuts import render, reverse
+from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseRedirect, JsonResponse
+import google.generativeai as genai
+from google.generativeai.types import HarmCategory, HarmBlockThreshold
+
+# Configure the API key
+genai.configure(api_key="AIzaSyC4Mx6gYYvhY_Cm0FTCxOxmvfPP-p1agYU") 
+
+def generate_summary(transcript_text, temp=0.001, max_output=1000, candidate_count=1):
+    """
+    This function generates a summary for the given transcript text.
+
+    :param transcript_text: The text that needs to be summarized.
+    :param temp: The temperature for text generation (controls randomness).
+    :param max_output: The maximum number of tokens for the output.
+    :param candidate_count: The number of candidate responses to generate.
+    :return: The generated summary.
+    """
+    if not transcript_text:
+        return "No transcript provided for summary."
+
+    # Prepare the prompt for summarization
+    prompt = f"""
+    Please summarize the following transcript:
+
+    Transcript:
+    {transcript_text}
+
+    Format:
+    Provide a brief overview of the main points discussed in the transcript with details.
+    """
+
+    # Generate the response based on the prompt
+    response = genai.GenerativeModel('gemini-2.5-flash').generate_content(
+        [{'role': 'user', 'parts': [prompt]}],
+        generation_config=genai.types.GenerationConfig(
+            candidate_count=candidate_count,
+            max_output_tokens=max_output,
+            temperature=temp,
+        ),
+        safety_settings={
+            HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,
+            HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE,
+            HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
+            HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_NONE
+        }
+    )
+    
+    # Return the generated summary text
+    return response.text
+
+def index(request):
+    transcript_text = ""
+    summary = ""
+    
+    if request.method == 'POST':
+        try:
+            # Read and parse JSON data from the body
+            data = json.loads(request.body.decode('utf-8'))
+            
+            # Extract video_url from the incoming JSON data
+            video_url = data.get('video_url')
+            
+            if not video_url:
+                return JsonResponse({'error': 'Video URL is required'}, status=400)
+            
+            # Extract video ID from YouTube URL
+            if 'v=' in video_url:
+                video_id = video_url.split('v=')[-1]
+                # Handle cases with extra query parameters
+                if '&' in video_id:
+                    video_id = video_id.split('&')[0]
+            else:
+                return JsonResponse({'error': 'Invalid YouTube video URL'}, status=400)
+
+            # Fetch transcript using the YouTubeTranscriptApi
+            transcript = YouTubeTranscriptApi.get_transcript(video_id)
+            transcript_text = ' '.join([entry['text'] for entry in transcript])
+            
+            # Generate summary for the transcript
+            summary = generate_summary(transcript_text)
+        
+        except Exception as e:
+            logging.error(f"Error occurred: {e}")
+            return JsonResponse({'error': f"An error occurred: {str(e)}"}, status=500)
+    
+    return JsonResponse({'transcript_text': transcript_text, 'summary': summary})

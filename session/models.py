@@ -50,6 +50,11 @@ class YoutubeSummery(ParentModel):
         return self.youtube.title
     
 # knowledgeBase model
+class TextSummery(ParentModel):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    session = models.ForeignKey(Session, on_delete=models.CASCADE)
+    text= models.TextField()
+    summery = models.TextField()
 
 class KnowledgeBase(ParentModel):
     type = models.CharField(max_length=50)

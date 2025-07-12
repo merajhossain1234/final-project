@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import (SessionMember,Session,Document,Youtube,YoutubeSummery,KnowledgeBase,Message, MemoryKnowledge, Note
+from .models import (SessionMember,Session,Document,Youtube,YoutubeSummery,TextSummery,KnowledgeBase,Message, MemoryKnowledge, Note
 )
 
 # Registering each model for admin panel
@@ -50,3 +50,6 @@ class MemoryKnowledgeAdmin(admin.ModelAdmin):
 class NoteAdmin(admin.ModelAdmin):
     list_display = ['title', 'session', 'user']
     search_fields = ['title', 'user__email']
+@admin.register(TextSummery)
+class TextSummeryAdmin(admin.ModelAdmin):
+    list_display = ['text', 'summery', 'session', 'user']

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from session.models import Youtube, YoutubeSummery
+from session.models import Youtube, YoutubeSummery,TextSummery
 
 class YoutubeSummerySerializer(serializers.ModelSerializer):
     class Meta:
@@ -14,5 +14,14 @@ class YoutubeSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
+class YoutubeCreateSerializer(serializers.ModelSerializer):
+    
+    class Meta:
+        model = Youtube
+        fields = '__all__'
 
+class TextSummerySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = TextSummery
+        fields = '__all__'
 
