@@ -49,6 +49,23 @@ class YoutubeSummery(ParentModel):
     def __str__(self):
         return self.youtube.title
     
+
+class TextSummery(ParentModel):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    session = models.ForeignKey(Session, on_delete=models.CASCADE)
+    text= models.TextField()
+    summery = models.TextField()
+    
+
+class ImageSummery(ParentModel):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    session = models.ForeignKey(Session, on_delete=models.CASCADE)
+    title= models.CharField(max_length=100)
+    image= models.ImageField(upload_to='images/')
+    summery = models.TextField()
+    
+    
+    
 # knowledgeBase model
 
 class KnowledgeBase(ParentModel):

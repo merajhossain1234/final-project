@@ -1,5 +1,8 @@
 # my_app/views.py
 import os
+import json
+import logging
+import tempfile
 import google.generativeai as gmini
 from django.http import JsonResponse
 from django.views import View
@@ -10,11 +13,6 @@ from django.views.decorators.csrf import csrf_exempt
 from .permissions import IsMemberOfSession
 from rest_framework.permissions import IsAuthenticated  # Optional, if you need auth check as well
 from rest_framework.decorators import permission_classes
-import json
-import logging
-from django.http import JsonResponse
-import io
-import tempfile
 from django.core.files.base import ContentFile
 
 class PDFUploadView(View):

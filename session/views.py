@@ -225,10 +225,10 @@ class DocumentListView(generics.ListAPIView):
 
     def get_queryset(self):
         # Retrieve the user and session from the request parameters (either URL or query params)
-        user = self.request.user  # Use the authenticated user (if filtering by current user)
+        # user = self.request.user  # Use the authenticated user (if filtering by current user)
         session_id = self.kwargs.get('session_id')  # You can also get this from query params if needed
         
         # Filter the documents by the authenticated user and session
-        queryset = Document.objects.filter(user=user, session_id=session_id)
+        queryset = Document.objects.filter(session_id=session_id)
 
         return queryset

@@ -9,27 +9,26 @@ https://docs.djangoproject.com/en/5.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
+# settings.py
 
 from pathlib import Path
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Secret Key and Debug settings
+SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-a5b6f6#646#zwxva%t820hd_)*oi*#z34h*4-0+(_4$*h^7@q7')
+DEBUG = os.getenv('DEBUG', 'True').lower() == 'true'
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-a5b6f6#646#zwxva%t820hd_)*oi*#z34h*4-0+(_4$*h^7@q7'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ["*"]
-
-
+# Allow localhost, all local network devices, and 0.0.0.0
+# ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', 'localhost,127.0.0.1,0.0.0.0,192.168.0.105,192.168.0.198,172.30.146.60,').split(',')
+ALLOWED_HOSTS=["*"]
 # Application definition
-
 INSTALLED_APPS = [
     'corsheaders',
     'django.contrib.admin',
@@ -51,11 +50,21 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
 ]
+
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
-    "http://192.168.0.105:5173",
-     "http://192.168.0.104:5173",
+    "http://192.168.0.105:5173",  # Replace with your frontend IP address
+    "http://192.168.0.198:5173",
+    "http://192.168.0.198",
+    "http://172.30.218.60",
+    "http://192.168.1.94",
+    "http://172.31.112.1"
 ]
+
+CORS_ALLOW_ALL_ORIGINS = True  # Adjust for your needs
+
+# Other settings remain the same...
+
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
         'EMAIL_AUTHENTICATION': True,
@@ -114,12 +123,23 @@ AUTH_USER_MODEL = 'accounts.User'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+# Database configuration with Docker support
+DATABASE_URL = os.getenv('DATABASE_URL', 'sqlite:///db.sqlite3')
+
+if DATABASE_URL.startswith('postgresql://'):
+    # PostgreSQL configuration for Docker
+    import dj_database_url
+    DATABASES = {
+        'default': dj_database_url.parse(DATABASE_URL)
     }
-}
+else:
+    # SQLite configuration (default)
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 
 # Password validation
@@ -163,14 +183,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
-STATIC_ROOT = 'staticfiles'
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_DIRS = [
     BASE_DIR / "frontend/assets",  # Ensure this path is correct
 ]
 
-DEBUG=True
+# Media files
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
